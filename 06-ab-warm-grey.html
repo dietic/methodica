@@ -1,0 +1,1630 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Methodica — Gestión Empresarial, Legal y Contabilidad</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,200;9..144,800;9..144,900&family=JetBrains+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* ═══════════════════════════════════════════
+       RESET & BASE
+       ═══════════════════════════════════════════ */
+      *,
+      *::before,
+      *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+        font-size: 16px;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      body {
+        background: #ffffff;
+        color: #111111;
+        font-family: "JetBrains Mono", monospace;
+        font-weight: 400;
+        line-height: 1.7;
+        overflow-x: hidden;
+      }
+
+      /* ═══════════════════════════════════════════
+       TYPOGRAPHY SYSTEM
+       ═══════════════════════════════════════════ */
+      .ff-display {
+        font-family: "Fraunces", serif;
+      }
+      .ff-mono {
+        font-family: "JetBrains Mono", monospace;
+      }
+
+      .fw-200 {
+        font-weight: 200;
+      }
+      .fw-800 {
+        font-weight: 800;
+      }
+      .fw-900 {
+        font-weight: 900;
+      }
+
+      .text-vermillion {
+        color: #f0efeb;
+      }
+      .text-white {
+        color: #ffffff;
+      }
+      .text-black {
+        color: #111111;
+      }
+      .text-grey {
+        color: rgba(17, 17, 17, 0.45);
+      }
+
+      .uppercase {
+        text-transform: uppercase;
+      }
+      .tracking-wide {
+        letter-spacing: 0.15em;
+      }
+      .tracking-tight {
+        letter-spacing: -0.03em;
+      }
+
+      /* ═══════════════════════════════════════════
+       LAYOUT
+       ═══════════════════════════════════════════ */
+      .container {
+        width: 100%;
+        max-width: 1440px;
+        margin: 0 auto;
+        padding: 0 clamp(1.5rem, 5vw, 6rem);
+      }
+
+      .rule {
+        border: none;
+        border-top: 1px solid #111111;
+        width: 100%;
+        margin: 0;
+      }
+
+      .rule--light {
+        border-top-color: rgba(17, 17, 17, 0.15);
+      }
+
+      .rule--white {
+        border-top-color: rgba(255, 255, 255, 0.2);
+      }
+
+      /* ═══════════════════════════════════════════
+       BUTTONS
+       ═══════════════════════════════════════════ */
+      .btn {
+        display: inline-block;
+        font-family: "JetBrains Mono", monospace;
+        font-weight: 700;
+        font-size: 0.8rem;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 1.25rem 3rem;
+        border: none;
+        cursor: pointer;
+        transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .btn--vermillion {
+        background: #f0efeb;
+        color: #111111;
+      }
+
+      .btn--vermillion:hover {
+        background: #111111;
+        color: #ffffff;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 30px rgba(240, 239, 235, 0.3);
+      }
+
+      .btn--outline {
+        background: transparent;
+        color: #111111;
+        border: 2px solid #111111;
+      }
+
+      .btn--outline:hover {
+        background: #111111;
+        color: #ffffff;
+      }
+
+      .btn--outline-white {
+        background: transparent;
+        color: #ffffff;
+        border: 2px solid #ffffff;
+      }
+
+      .btn--outline-white:hover {
+        background: #ffffff;
+        color: #111111;
+      }
+
+      /* ═══════════════════════════════════════════
+       ANIMATIONS
+       ═══════════════════════════════════════════ */
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(40px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes slideInLeft {
+        from {
+          opacity: 0;
+          transform: translateX(-60px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      @keyframes scaleIn {
+        from {
+          opacity: 0;
+          transform: scale(0.92);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+
+      @keyframes pulseRule {
+        0%,
+        100% {
+          width: 0;
+        }
+        50% {
+          width: 100%;
+        }
+      }
+
+      .animate-fade-in {
+        animation: fadeInUp 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+      }
+
+      .animate-slide-left {
+        animation: slideInLeft 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+      }
+
+      .animate-delay-1 {
+        animation-delay: 0.15s;
+      }
+      .animate-delay-2 {
+        animation-delay: 0.3s;
+      }
+      .animate-delay-3 {
+        animation-delay: 0.45s;
+      }
+      .animate-delay-4 {
+        animation-delay: 0.6s;
+      }
+      .animate-delay-5 {
+        animation-delay: 0.75s;
+      }
+
+      /* ═══════════════════════════════════════════
+       NAV
+       ═══════════════════════════════════════════ */
+      .nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 100;
+        padding: 1.5rem 0;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border-bottom: 1px solid rgba(17, 17, 17, 0.08);
+      }
+
+      .nav__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .nav__logo {
+        font-family: "Fraunces", serif;
+        font-weight: 900;
+        font-size: 1.5rem;
+        letter-spacing: -0.03em;
+        color: #111111;
+        text-decoration: none;
+      }
+
+      .nav__logo span {
+        color: #f0efeb;
+      }
+
+      .nav__links {
+        display: none;
+        list-style: none;
+        gap: 2.5rem;
+        align-items: center;
+      }
+
+      .nav__links a {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 0.7rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.15em;
+        color: #111111;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      .nav__links a:hover {
+        color: #f0efeb;
+      }
+
+      .nav__links .btn--vermillion:hover {
+        transform: none;
+      }
+
+      @media (min-width: 768px) {
+        .nav__links {
+          display: flex;
+        }
+      }
+
+      /* ═══════════════════════════════════════════
+       SECTION 1: HERO
+       ═══════════════════════════════════════════ */
+      .hero {
+        min-height: 100vh;
+        display: flex;
+        align-items: flex-end;
+        padding-top: 8rem;
+        padding-bottom: 4rem;
+        position: relative;
+      }
+
+      .hero__grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        width: 100%;
+      }
+
+      .hero__headline {
+        font-family: "Fraunces", serif;
+        font-weight: 900;
+        line-height: 0.88;
+        letter-spacing: -0.04em;
+        color: #111111;
+      }
+
+      .hero__line-1 {
+        font-size: clamp(4rem, 15vw, 12rem);
+        display: block;
+      }
+
+      .hero__line-2 {
+        font-size: clamp(2.5rem, 8vw, 6rem);
+        font-weight: 200;
+        display: block;
+        margin-top: 0.5rem;
+        color: rgba(17, 17, 17, 0.45);
+      }
+
+      .hero__line-3 {
+        font-size: clamp(4rem, 15vw, 12rem);
+        display: block;
+        margin-top: -0.2rem;
+      }
+
+      .hero__dot {
+        color: #f0efeb;
+      }
+
+      .hero__right {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        gap: 2.5rem;
+      }
+
+      .hero__sub {
+        font-family: "JetBrains Mono", monospace;
+        font-size: clamp(0.75rem, 1.2vw, 0.95rem);
+        line-height: 1.8;
+        color: rgba(17, 17, 17, 0.45);
+        max-width: 480px;
+      }
+
+      .hero__edition {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 0.65rem;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        color: rgba(17, 17, 17, 0.35);
+        position: absolute;
+        top: 8rem;
+        right: clamp(1.5rem, 5vw, 6rem);
+      }
+
+      @media (min-width: 768px) {
+        .hero {
+          padding-bottom: 6rem;
+        }
+
+        .hero__grid {
+          grid-template-columns: 2fr 1fr;
+          gap: 4rem;
+          align-items: end;
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .hero__grid {
+          grid-template-columns: 3fr 1fr;
+        }
+      }
+
+      /* ═══════════════════════════════════════════
+       SECTION 2: PAIN / PROBLEM
+       ═══════════════════════════════════════════ */
+      .pain {
+        padding: 6rem 0;
+      }
+
+      .pain__header {
+        margin-bottom: 4rem;
+      }
+
+      .pain__label {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 0.7rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        color: #f0efeb;
+        margin-bottom: 2rem;
+        display: block;
+      }
+
+      .pain__pullquote {
+        font-family: "Fraunces", serif;
+        font-weight: 200;
+        font-size: clamp(2rem, 5vw, 4.5rem);
+        line-height: 1.15;
+        letter-spacing: -0.02em;
+        max-width: 900px;
+      }
+
+      .pain__pullquote strong {
+        font-weight: 900;
+      }
+
+      .pain__grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        margin-top: 4rem;
+      }
+
+      .pain__item {
+        padding: 2.5rem 0;
+        border-top: 1px solid rgba(17, 17, 17, 0.12);
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 1.5rem;
+        align-items: start;
+      }
+
+      .pain__number {
+        font-family: "Fraunces", serif;
+        font-weight: 900;
+        font-size: 3.5rem;
+        line-height: 1;
+        color: rgba(17, 17, 17, 0.08);
+        letter-spacing: -0.03em;
+      }
+
+      .pain__content h3 {
+        font-family: "Fraunces", serif;
+        font-weight: 800;
+        font-size: 1.3rem;
+        margin-bottom: 0.75rem;
+        letter-spacing: -0.02em;
+      }
+
+      .pain__content p {
+        font-size: 0.85rem;
+        color: rgba(17, 17, 17, 0.45);
+        line-height: 1.7;
+        max-width: 500px;
+      }
+
+      @media (min-width: 768px) {
+        .pain {
+          padding: 8rem 0;
+        }
+
+        .pain__grid {
+          grid-template-columns: 1fr 1fr;
+          gap: 0 4rem;
+        }
+
+        .pain__item:nth-child(odd) {
+          transform: translateY(3rem);
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .pain__grid {
+          grid-template-columns: 1fr 1fr;
+          gap: 0 6rem;
+        }
+      }
+
+      /* ═══════════════════════════════════════════
+       SECTION 3: SOLUTION STATEMENT
+       ═══════════════════════════════════════════ */
+      .solution {
+        background: #111111;
+        color: #ffffff;
+        padding: 8rem 0;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .solution__text {
+        font-family: "Fraunces", serif;
+        font-weight: 900;
+        font-size: clamp(2.5rem, 7vw, 7rem);
+        line-height: 1.05;
+        letter-spacing: -0.04em;
+        max-width: 1200px;
+      }
+
+      .solution__text .light {
+        font-weight: 200;
+        color: rgba(255, 255, 255, 0.45);
+      }
+
+      .solution__text .accent {
+        color: #f0efeb;
+      }
+
+      .solution__sub {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 0.85rem;
+        color: rgba(255, 255, 255, 0.5);
+        margin-top: 3rem;
+        max-width: 550px;
+        line-height: 1.8;
+      }
+
+      .solution__line {
+        width: 80px;
+        height: 3px;
+        background: #f0efeb;
+        margin-top: 3rem;
+      }
+
+      @media (min-width: 768px) {
+        .solution {
+          padding: 12rem 0;
+        }
+      }
+
+      /* ═══════════════════════════════════════════
+       SECTION 4: SERVICES
+       ═══════════════════════════════════════════ */
+      .services {
+        padding: 6rem 0;
+      }
+
+      .services__header {
+        margin-bottom: 4rem;
+      }
+
+      .services__label {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 0.7rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        color: rgba(17, 17, 17, 0.35);
+        margin-bottom: 2rem;
+        display: block;
+      }
+
+      .services__title {
+        font-family: "Fraunces", serif;
+        font-weight: 900;
+        font-size: clamp(2rem, 4vw, 3.5rem);
+        letter-spacing: -0.03em;
+        line-height: 1.1;
+      }
+
+      .services__grid {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .service {
+        border-top: 1px solid rgba(17, 17, 17, 0.12);
+        padding: 3rem 0;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        gap: 0.75rem;
+      }
+
+      .service:last-child {
+        border-bottom: 1px solid rgba(17, 17, 17, 0.12);
+      }
+
+      .service__number {
+        font-family: "Fraunces", serif;
+        font-weight: 900;
+        font-size: clamp(3rem, 6vw, 5rem);
+        line-height: 1;
+        color: rgba(17, 17, 17, 0.06);
+        letter-spacing: -0.04em;
+      }
+
+      .service__name {
+        font-family: "Fraunces", serif;
+        font-weight: 900;
+        font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+        letter-spacing: -0.03em;
+        line-height: 1.1;
+        margin-bottom: 0.5rem;
+      }
+
+      .service__desc {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 0.8rem;
+        color: rgba(17, 17, 17, 0.45);
+        line-height: 1.8;
+        margin-bottom: 1rem;
+      }
+
+      .service__features {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+      }
+
+      .service__features li {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 0.7rem;
+        font-weight: 400;
+        color: #111111;
+        background: #f0efeb;
+        padding: 0.5rem 1rem;
+        line-height: 1.4;
+      }
+
+      @media (min-width: 768px) {
+        .services {
+          padding: 8rem 0;
+        }
+
+        .service {
+          grid-template-columns: auto 1fr;
+          grid-template-rows: auto auto;
+          gap: 0 4rem;
+          padding: 3.5rem 0;
+        }
+
+        .service__number {
+          grid-row: 1 / -1;
+          align-self: start;
+        }
+
+        .service__name {
+          grid-column: 2;
+        }
+
+        .service__desc {
+          grid-column: 2;
+        }
+
+        .service__features {
+          grid-column: 2;
+        }
+      }
+
+      /* ═══════════════════════════════════════════
+       SECTION 5: SOCIAL PROOF
+       ═══════════════════════════════════════════ */
+      .proof {
+        background: #111111;
+        color: #ffffff;
+        padding: 6rem 0;
+      }
+
+      .proof__label {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 0.7rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        color: #f0efeb;
+        margin-bottom: 4rem;
+        display: block;
+      }
+
+      .proof__stats {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        margin-bottom: 6rem;
+        padding-bottom: 6rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .stat {
+        text-align: left;
+      }
+
+      .stat__number {
+        font-family: "Fraunces", serif;
+        font-weight: 900;
+        font-size: clamp(3rem, 8vw, 6rem);
+        line-height: 1;
+        letter-spacing: -0.04em;
+        display: block;
+      }
+
+      .stat__label {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 0.65rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.15em;
+        color: rgba(255, 255, 255, 0.5);
+        margin-top: 0.5rem;
+        display: block;
+      }
+
+      .testimonials {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 4rem;
+      }
+
+      .testimonial {
+        position: relative;
+        padding-left: 0;
+      }
+
+      .testimonial__quote {
+        font-family: "Fraunces", serif;
+        font-weight: 200;
+        font-size: clamp(1.3rem, 2.5vw, 2rem);
+        line-height: 1.4;
+        letter-spacing: -0.01em;
+        color: rgba(255, 255, 255, 0.85);
+        position: relative;
+        padding-left: 2rem;
+        border-left: 3px solid #f0efeb;
+      }
+
+      .testimonial__mark {
+        font-family: "Fraunces", serif;
+        font-weight: 900;
+        font-size: 6rem;
+        line-height: 0;
+        color: rgba(240, 239, 235, 0.3);
+        position: absolute;
+        top: 2.5rem;
+        left: -0.5rem;
+      }
+
+      .testimonial__author {
+        margin-top: 1.5rem;
+        padding-left: 2rem;
+      }
+
+      .testimonial__name {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 0.8rem;
+        font-weight: 700;
+        color: #ffffff;
+      }
+
+      .testimonial__role {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 0.7rem;
+        color: rgba(255, 255, 255, 0.5);
+        margin-top: 0.25rem;
+      }
+
+      @media (min-width: 768px) {
+        .proof {
+          padding: 8rem 0;
+        }
+
+        .proof__stats {
+          grid-template-columns: repeat(4, 1fr);
+          gap: 3rem;
+        }
+
+        .testimonials {
+          grid-template-columns: 1fr 1fr;
+          gap: 4rem;
+        }
+
+        .testimonial:nth-child(2) {
+          margin-top: 5rem;
+        }
+
+        .testimonial:nth-child(3) {
+          grid-column: 1 / -1;
+          max-width: 700px;
+          margin-left: auto;
+        }
+      }
+
+      /* ═══════════════════════════════════════════
+       SECTION 6: FAQ
+       ═══════════════════════════════════════════ */
+      .faq {
+        padding: 6rem 0;
+      }
+
+      .faq__layout {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+
+      .faq__header {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+      }
+
+      .faq__label {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 0.7rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        color: rgba(17, 17, 17, 0.35);
+        margin-bottom: 2rem;
+        display: block;
+      }
+
+      .faq__title {
+        font-family: "Fraunces", serif;
+        font-weight: 900;
+        font-size: clamp(2rem, 4vw, 3.5rem);
+        letter-spacing: -0.03em;
+        line-height: 1.1;
+      }
+
+      .faq__list {
+        max-width: 900px;
+      }
+
+      .faq__item {
+        border-top: 1px solid rgba(17, 17, 17, 0.12);
+      }
+
+      .faq__item:last-child {
+        border-bottom: 1px solid rgba(17, 17, 17, 0.12);
+      }
+
+      .faq__question {
+        width: 100%;
+        background: none;
+        border: none;
+        text-align: left;
+        padding: 2rem 0;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2rem;
+        font-family: "Fraunces", serif;
+        font-weight: 800;
+        font-size: clamp(1rem, 1.5vw, 1.25rem);
+        letter-spacing: -0.02em;
+        color: #111111;
+        transition: color 0.3s ease;
+      }
+
+      .faq__question:hover {
+        color: rgba(17, 17, 17, 0.5);
+      }
+
+      .faq__icon {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 1.2rem;
+        font-weight: 400;
+        flex-shrink: 0;
+        width: 2rem;
+        height: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: transform 0.3s ease;
+      }
+
+      .faq__answer {
+        max-height: 0;
+        overflow: hidden;
+        transition:
+          max-height 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+          padding 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      }
+
+      .faq__answer-inner {
+        padding-bottom: 2rem;
+        font-family: "JetBrains Mono", monospace;
+        font-size: 0.82rem;
+        color: rgba(17, 17, 17, 0.45);
+        line-height: 1.8;
+        max-width: 650px;
+      }
+
+      .faq__item.active .faq__icon {
+        transform: rotate(45deg);
+      }
+
+      .faq__item.active .faq__answer {
+        max-height: 400px;
+      }
+
+      @media (min-width: 768px) {
+        .faq {
+          padding: 8rem 0;
+        }
+
+        .faq__layout {
+          grid-template-columns: 1fr 1.5fr;
+          gap: 4rem;
+          align-items: start;
+        }
+
+        .faq__header {
+          position: sticky;
+          top: 8rem;
+        }
+      }
+
+      /* ═══════════════════════════════════════════
+       SECTION 7: PRICING
+       ═══════════════════════════════════════════ */
+      .pricing {
+        padding: 6rem 0;
+        background: #ffffff;
+      }
+
+      .pricing__label {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 0.7rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        color: #f0efeb;
+        margin-bottom: 2rem;
+        display: block;
+      }
+
+      .pricing__title {
+        font-family: "Fraunces", serif;
+        font-weight: 900;
+        font-size: clamp(2rem, 4vw, 3.5rem);
+        letter-spacing: -0.03em;
+        line-height: 1.1;
+        margin-bottom: 1.5rem;
+      }
+
+      .pricing__sub {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 0.85rem;
+        color: rgba(17, 17, 17, 0.45);
+        max-width: 550px;
+        line-height: 1.8;
+        margin-bottom: 4rem;
+      }
+
+      .pricing__grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .plan {
+        padding: 3rem 2.5rem;
+        border: 1px solid rgba(17, 17, 17, 0.1);
+        background: #ffffff;
+        position: relative;
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease;
+      }
+
+      .plan:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 20px 60px rgba(17, 17, 17, 0.08);
+      }
+
+      .plan--featured {
+        border-color: #111111;
+        background: #111111;
+        color: #ffffff;
+      }
+
+      .plan--featured .plan__desc,
+      .plan--featured .plan__features li {
+        color: rgba(255, 255, 255, 0.6);
+      }
+
+      .plan--featured .plan__features li::before {
+        background: #f0efeb;
+      }
+
+      .plan__badge {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 0.6rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        background: #f0efeb;
+        color: #111111;
+        padding: 0.4rem 1rem;
+        display: inline-block;
+        margin-bottom: 1.5rem;
+      }
+
+      .plan__name {
+        font-family: "Fraunces", serif;
+        font-weight: 800;
+        font-size: 1.5rem;
+        letter-spacing: -0.02em;
+        margin-bottom: 0.5rem;
+      }
+
+      .plan__desc {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 0.75rem;
+        color: rgba(17, 17, 17, 0.45);
+        margin-bottom: 2rem;
+      }
+
+      .plan__price {
+        font-family: "Fraunces", serif;
+        font-weight: 900;
+        font-size: clamp(3rem, 5vw, 4rem);
+        letter-spacing: -0.04em;
+        line-height: 1;
+        margin-bottom: 0.25rem;
+      }
+
+      .plan__price-sub {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 0.7rem;
+        color: rgba(17, 17, 17, 0.45);
+        margin-bottom: 2.5rem;
+      }
+
+      .plan__features {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 0.7rem;
+        margin-bottom: 2.5rem;
+      }
+
+      .plan__features li {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 0.75rem;
+        color: rgba(17, 17, 17, 0.55);
+        padding-left: 1.2rem;
+        position: relative;
+        line-height: 1.6;
+      }
+
+      .plan__features li::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0.45rem;
+        width: 5px;
+        height: 5px;
+        background: #111111;
+      }
+
+      @media (min-width: 768px) {
+        .pricing {
+          padding: 8rem 0;
+        }
+
+        .pricing__grid {
+          grid-template-columns: 1fr 1.15fr 1fr;
+          gap: 0;
+          align-items: center;
+        }
+
+        .plan--featured {
+          padding: 4rem 2.5rem;
+          z-index: 2;
+        }
+      }
+
+      /* ═══════════════════════════════════════════
+       SECTION 8: FINAL CTA
+       ═══════════════════════════════════════════ */
+      .final-cta {
+        padding: 8rem 0;
+        text-align: center;
+      }
+
+      .final-cta__text {
+        font-family: "Fraunces", serif;
+        font-weight: 900;
+        font-size: clamp(2.5rem, 8vw, 7rem);
+        line-height: 1;
+        letter-spacing: -0.04em;
+        margin-bottom: 2rem;
+      }
+
+      .final-cta__text .light {
+        font-weight: 200;
+        display: block;
+        color: rgba(17, 17, 17, 0.45);
+        font-size: 0.5em;
+        margin-bottom: 0.5rem;
+        letter-spacing: 0;
+      }
+
+      .final-cta__sub {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 0.85rem;
+        color: rgba(17, 17, 17, 0.45);
+        max-width: 500px;
+        margin: 0 auto 3rem;
+        line-height: 1.8;
+      }
+
+      @media (min-width: 768px) {
+        .final-cta {
+          padding: 12rem 0;
+        }
+      }
+
+      /* ═══════════════════════════════════════════
+       SECTION 9: FOOTER
+       ═══════════════════════════════════════════ */
+      .footer {
+        background: #111111;
+        color: #ffffff;
+        padding: 4rem 0 2rem;
+      }
+
+      .footer__grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        margin-bottom: 4rem;
+      }
+
+      .footer__logo {
+        font-family: "Fraunces", serif;
+        font-weight: 900;
+        font-size: 1.5rem;
+        letter-spacing: -0.03em;
+        color: #ffffff;
+        text-decoration: none;
+      }
+
+      .footer__logo span {
+        color: #f0efeb;
+      }
+
+      .footer__desc {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 0.75rem;
+        color: rgba(255, 255, 255, 0.5);
+        line-height: 1.8;
+        margin-top: 1rem;
+        max-width: 300px;
+      }
+
+      .footer__col-title {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 0.65rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        color: rgba(255, 255, 255, 0.5);
+        margin-bottom: 1.25rem;
+      }
+
+      .footer__links {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+
+      .footer__links a {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 0.78rem;
+        color: rgba(255, 255, 255, 0.6);
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      .footer__links a:hover {
+        color: #ffffff;
+      }
+
+      .footer__bottom {
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        padding-top: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        justify-content: space-between;
+        align-items: flex-start;
+      }
+
+      .footer__copy {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 0.7rem;
+        color: rgba(255, 255, 255, 0.4);
+      }
+
+      .footer__legal {
+        display: flex;
+        gap: 2rem;
+      }
+
+      .footer__legal a {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 0.7rem;
+        color: rgba(255, 255, 255, 0.4);
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      .footer__legal a:hover {
+        color: #ffffff;
+      }
+
+      @media (min-width: 768px) {
+        .footer__grid {
+          grid-template-columns: 2fr 1fr 1fr 1fr;
+          gap: 4rem;
+        }
+
+        .footer__bottom {
+          flex-direction: row;
+          align-items: center;
+        }
+      }
+
+      /* ═══════════════════════════════════════════
+       UTILITY / MISC
+       ═══════════════════════════════════════════ */
+      .section-spacer {
+        padding: 1rem 0;
+      }
+
+      ::selection {
+        background: #f0efeb;
+        color: #ffffff;
+      }
+
+      /* Scrollbar */
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: #ffffff;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: #f0efeb;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background: #111111;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ═══════════════════════════════════════════
+       NAV
+       ═══════════════════════════════════════════ -->
+    <nav class="nav">
+      <div class="container nav__inner">
+        <a href="#" class="nav__logo">methodica<span>.</span></a>
+        <ul class="nav__links">
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li>
+            <a
+              href="#contacto"
+              class="btn btn--vermillion"
+              style="padding: 0.8rem 1.8rem; font-size: 0.65rem"
+              >Agenda Tu Consulta</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- ═══════════════════════════════════════════
+       SECTION 1: HERO
+       ═══════════════════════════════════════════ -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero__grid">
+          <div class="hero__left">
+            <h1 class="hero__headline animate-fade-in">
+              <span class="hero__line-1">TU</span>
+              <span class="hero__line-2">empresa, nuestro</span>
+              <span class="hero__line-3"
+                >EXPERTISE<span class="hero__dot">.</span></span
+              >
+            </h1>
+          </div>
+          <div class="hero__right animate-fade-in animate-delay-2">
+            <p class="hero__sub">
+              Gestión empresarial estratégica para empresas que quieren crecer
+              con estructura.
+            </p>
+            <a href="#contacto" class="btn btn--vermillion"
+              >Agenda Tu Consulta</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container"><hr class="rule" /></div>
+
+    <!-- ═══════════════════════════════════════════
+       SECTION 2: PAIN / PROBLEM
+       ═══════════════════════════════════════════ -->
+    <section class="pain" id="problema">
+      <div class="container">
+        <div class="pain__header">
+          <p class="pain__pullquote">
+            Mientras construyes tu negocio, la
+            <strong
+              >gestión administrativa, los impuestos y la incertidumbre
+              legal</strong
+            >
+            consumen tu tiempo y tu capital.
+          </p>
+        </div>
+
+        <div class="pain__grid">
+          <div class="pain__item">
+            <span class="pain__number">01</span>
+            <div class="pain__content">
+              <h3>Procesos que no escalan contigo</h3>
+              <p>
+                Lo que antes funcionaba, hoy te limita. Sin estructura, el
+                crecimiento aumenta el desorden en lugar de optimizar la
+                operación.
+              </p>
+            </div>
+          </div>
+
+          <div class="pain__item">
+            <span class="pain__number">02</span>
+            <div class="pain__content">
+              <h3>Decisiones empresariales sin información clara</h3>
+              <p>
+                Sin visibilidad real de tus números y procesos, tomar decisiones
+                se vuelve un riesgo constante.
+              </p>
+            </div>
+          </div>
+
+          <div class="pain__item">
+            <span class="pain__number">03</span>
+            <div class="pain__content">
+              <h3>Multas y errores fiscales evitables</h3>
+              <p>
+                Una declaración fuera de plazo o una estructura contable mal
+                organizada puede generarte gastos innecesarios.
+              </p>
+            </div>
+          </div>
+
+          <div class="pain__item">
+            <span class="pain__number">04</span>
+            <div class="pain__content">
+              <h3>Incertidumbre legal que frena tu crecimiento</h3>
+              <p>
+                Contratos mal redactados, propiedad intelectual desprotegida,
+                regulaciones que cambian. Sin respaldo legal, cada paso hacia
+                adelante es un riesgo.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+       SECTION 3: SOLUTION
+       ═══════════════════════════════════════════ -->
+    <section class="solution">
+      <div class="container">
+        <p class="solution__text">
+          Methodica<span class="accent">.</span><br />
+          <span class="light">Tu equipo completo.</span><br />
+          Sin el costo de un departamento interno<span class="accent">.</span>
+        </p>
+        <p class="solution__sub">
+          Integramos la gestión empresarial con respaldo contable y legal a
+          través de aliados estratégicos. Estructura para crecer con claridad.
+        </p>
+        <div class="solution__line"></div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+       SECTION 4: SERVICES
+       ═══════════════════════════════════════════ -->
+    <section class="services" id="servicios">
+      <div class="container">
+        <div class="services__header">
+          <span class="services__label">Nuestros servicios</span>
+          <h2 class="services__title">
+            Tres pilares para que<br />tu empresa crezca con estructura.
+          </h2>
+        </div>
+
+        <div class="services__grid">
+          <!-- Service 1 -->
+          <div class="service">
+            <span class="service__number">01</span>
+            <h3 class="service__name">Gestión Empresarial</h3>
+            <p class="service__desc">
+              Ordenamos la gestión de tu empresa integrando procesos, operación
+              y estrategia. Construimos la base que sostiene su crecimiento.
+            </p>
+            <ul class="service__features">
+              <li>Estructura organizacional y soporte administrativo</li>
+              <li>Planificación estratégica</li>
+              <li>Optimización de procesos operativos</li>
+              <li>Gestión de trámites, permisos y registros</li>
+            </ul>
+          </div>
+
+          <!-- Service 2 -->
+          <div class="service">
+            <span class="service__number">02</span>
+            <h3 class="service__name">Contabilidad</h3>
+            <p class="service__desc">
+              Tus números, claros y al día. Te damos la visibilidad financiera
+              que necesitas para tomar decisiones inteligentes y cumplir con
+              cada obligación sin estrés.
+            </p>
+            <ul class="service__features">
+              <li>Declaraciones fiscales puntuales y precisas</li>
+              <li>Estados financieros mensuales y reportes ejecutivos</li>
+              <li>Nómina y cumplimiento de obligaciones laborales</li>
+              <li>Auditoría interna y control financiero</li>
+            </ul>
+          </div>
+
+          <!-- Service 3 -->
+          <div class="service">
+            <span class="service__number">03</span>
+            <h3 class="service__name">Legal</h3>
+            <p class="service__desc">
+              Respaldo legal integrado a la operación de tu empresa. Para crecer
+              con seguridad y sin riesgos innecesarios.
+            </p>
+            <ul class="service__features">
+              <li>Constitución de empresas y estructuras societarias</li>
+              <li>Contratos y acuerdos comerciales blindados</li>
+              <li>Cumplimiento regulatorio y normativo</li>
+              <li>Protección de propiedad intelectual</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+       SECTION 6: FAQ
+       ═══════════════════════════════════════════ -->
+    <section class="faq" id="faq">
+      <div class="container">
+        <div class="faq__layout">
+          <div class="faq__header">
+            <span class="faq__label">Preguntas frecuentes</span>
+            <h2 class="faq__title">
+              Todo lo que necesitas saber antes de dar el siguiente paso.
+            </h2>
+          </div>
+
+          <div class="faq__list">
+            <div class="faq__item">
+              <button
+                class="faq__question"
+                onclick="this.parentElement.classList.toggle('active')"
+              >
+                <span>&iquest;Cómo es el proceso de onboarding?</span>
+                <span class="faq__icon">+</span>
+              </button>
+              <div class="faq__answer">
+                <div class="faq__answer-inner">
+                  Comenzamos con una reunión inicial donde entendemos cómo
+                  funciona tu empresa hoy: su estructura, procesos y desafíos
+                  operativos. A partir de ese diagnóstico definimos qué áreas
+                  necesitan ordenarse primero y establecemos un plan de trabajo
+                  claro.
+                </div>
+              </div>
+            </div>
+
+            <div class="faq__item">
+              <button
+                class="faq__question"
+                onclick="this.parentElement.classList.toggle('active')"
+              >
+                <span>&iquest;Trabajan con empresas de cualquier tamaño?</span>
+                <span class="faq__icon">+</span>
+              </button>
+              <div class="faq__answer">
+                <div class="faq__answer-inner">
+                  Trabajamos principalmente con startups, negocios digitales y
+                  empresas de servicios que están en etapa de crecimiento y
+                  necesitan estructura para escalar con orden. Nuestro enfoque
+                  está pensado para empresas que quieren profesionalizar su
+                  operación antes de que el desorden se convierta en un
+                  problema.
+                </div>
+              </div>
+            </div>
+
+            <div class="faq__item">
+              <button
+                class="faq__question"
+                onclick="this.parentElement.classList.toggle('active')"
+              >
+                <span
+                  >&iquest;Qué tipo de problemas ayuda a resolver
+                  Methodica?</span
+                >
+                <span class="faq__icon">+</span>
+              </button>
+              <div class="faq__answer">
+                <div class="faq__answer-inner">
+                  Methodica ayuda a resolver problemas comunes en empresas en
+                  crecimiento:
+                  <ul style="margin-top: 1rem; padding-left: 1.2rem">
+                    <li>desorden administrativo</li>
+                    <li>falta de estructura operativa</li>
+                    <li>procesos improvisados</li>
+                    <li>riesgos legales o fiscales</li>
+                    <li>falta de claridad financiera</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="faq__item">
+              <button
+                class="faq__question"
+                onclick="this.parentElement.classList.toggle('active')"
+              >
+                <span>&iquest;Qué pasa si ya tengo un contador?</span>
+                <span class="faq__icon">+</span>
+              </button>
+              <div class="faq__answer">
+                <div class="faq__answer-inner">
+                  Podemos trabajar perfectamente con los profesionales que ya
+                  forman parte de tu empresa. Methodica se encarga de coordinar
+                  la gestión empresarial para que la información financiera y
+                  operativa esté alineada con las decisiones del negocio.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+       SECTION 8: FINAL CTA
+       ═══════════════════════════════════════════ -->
+    <section class="final-cta" id="contacto">
+      <div class="container">
+        <h2 class="final-cta__text">
+          <span class="light">El momento de actuar es</span>
+          AHORA<span class="text-vermillion">.</span>
+        </h2>
+        <p class="final-cta__sub">
+          Cada día sin estructura le cuesta dinero a tu empresa. Agenda una
+          consulta gratuita y descubre cómo podemos transformar tu operación en
+          las próximas semanas.
+        </p>
+        <a href="mailto:hola@methodica.com" class="btn btn--vermillion"
+          >Agenda Tu Consulta</a
+        >
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+       SECTION 9: FOOTER
+       ═══════════════════════════════════════════ -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__grid">
+          <div>
+            <a href="#" class="footer__logo">methodica<span>.</span></a>
+            <p class="footer__desc">
+              Gestión empresarial estratégica para empresas que quieren crecer
+              con estructura.
+            </p>
+          </div>
+
+          <div>
+            <p class="footer__col-title">Servicios</p>
+            <ul class="footer__links">
+              <li><a href="#servicios">Gestión Empresarial</a></li>
+              <li><a href="#servicios">Legal</a></li>
+              <li><a href="#servicios">Contabilidad</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <p class="footer__col-title">Contacto</p>
+            <ul class="footer__links">
+              <li><a href="mailto:hola@methodica.pe">hola@methodica.pe</a></li>
+              <li><a href="tel:+51956285469">+51 956 285 469</a></li>
+              <li><a href="#">WhatsApp</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer__bottom">
+          <p class="footer__copy">
+            &copy; 2026 Methodica. Todos los derechos reservados.
+          </p>
+          <div class="footer__legal"></div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
