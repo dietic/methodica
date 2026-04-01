@@ -313,11 +313,11 @@ export default function Home() {
                 Methodica ayuda a resolver problemas comunes en empresas en
                 crecimiento:
                 <ul style={{ marginTop: "1rem", paddingLeft: "1.2rem" }}>
-                  <li>desorden administrativo</li>
-                  <li>falta de estructura operativa</li>
-                  <li>procesos improvisados</li>
-                  <li>riesgos legales o fiscales</li>
-                  <li>falta de claridad financiera</li>
+                  <li>Desorden administrativo</li>
+                  <li>Falta de estructura operativa</li>
+                  <li>Procesos improvisados</li>
+                  <li>Riesgos legales o fiscales</li>
+                  <li>Falta de claridad financiera</li>
                 </ul>
               </FaqItem>
 
@@ -389,7 +389,7 @@ export default function Home() {
                   <a href="tel:+51956285469">+51 956 285 469</a>
                 </li>
                 <li>
-                  <a href="#">WhatsApp</a>
+                  <a href="https://wa.me/+956285459">WhatsApp</a>
                 </li>
               </ul>
             </div>
