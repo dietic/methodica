@@ -389,7 +389,7 @@ export default function Home() {
                   <a href="tel:+51956285469">+51 956 285 469</a>
                 </li>
                 <li>
-                  <a href="https://wa.me/+956285459">WhatsApp</a>
+                  <a href="https://wa.me/+51956285469">WhatsApp</a>
                 </li>
               </ul>
             </div>
