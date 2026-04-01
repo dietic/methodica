@@ -9,7 +9,7 @@ const jsonLd = {
       name: "Methodica",
       url: "https://methodica.pe",
       description:
-        "Gestión empresarial estratégica para empresas que quieren crecer con estructura. Integramos gestión, contabilidad y respaldo legal.",
+        "Gestión empresarial estratégica para empresas en crecimiento. Estructura organizacional, control financiero y orden administrativo sin el costo de un departamento interno.",
       telephone: "+51956285469",
       email: "hola@methodica.pe",
       address: {
@@ -20,11 +20,7 @@ const jsonLd = {
         "@type": "Country",
         name: "Perú",
       },
-      serviceType: [
-        "Gestión Empresarial",
-        "Contabilidad",
-        "Asesoría Legal",
-      ],
+      serviceType: ["Estructura y Gestión Empresarial", "Control y Organización Financiera", "Implementación y Orden Administrativo"],
       knowsLanguage: "es",
     },
     {
@@ -234,48 +230,32 @@ export default function Home() {
           <div className="services__grid">
             <article className="service">
               <span className="service__number" aria-hidden="true">01</span>
-              <h3 className="service__name">Gestión Empresarial</h3>
+              <h3 className="service__name">Estructura y Gestión Empresarial</h3>
               <p className="service__desc">
-                Ordenamos la gestión de tu empresa integrando procesos, operación
-                y estrategia. Construimos la base que sostiene su crecimiento.
+                Diseñamos el marco organizacional que tu empresa necesita para
+                operar con claridad. Definimos roles, flujos y sistemas para que
+                el negocio funcione con orden desde su base.
               </p>
-              <ul className="service__features">
-                <li>Estructura organizacional y soporte administrativo</li>
-                <li>Planificación estratégica</li>
-                <li>Optimización de procesos operativos</li>
-                <li>Gestión de trámites, permisos y registros</li>
-              </ul>
             </article>
 
             <article className="service">
               <span className="service__number" aria-hidden="true">02</span>
-              <h3 className="service__name">Contabilidad</h3>
+              <h3 className="service__name">Control y Organización Financiera</h3>
               <p className="service__desc">
-                Tus números, claros y al día. Te damos la visibilidad financiera
-                que necesitas para tomar decisiones inteligentes y cumplir con
-                cada obligación sin estrés.
+                Ponemos orden en tus números para que tengas visibilidad real de
+                tu situación financiera. Información clara y al día para tomar
+                decisiones con confianza.
               </p>
-              <ul className="service__features">
-                <li>Declaraciones fiscales puntuales y precisas</li>
-                <li>Estados financieros mensuales y reportes ejecutivos</li>
-                <li>Nómina y cumplimiento de obligaciones laborales</li>
-                <li>Auditoría interna y control financiero</li>
-              </ul>
             </article>
 
             <article className="service">
               <span className="service__number" aria-hidden="true">03</span>
-              <h3 className="service__name">Legal</h3>
+              <h3 className="service__name">Implementación y Orden Administrativo</h3>
               <p className="service__desc">
-                Respaldo legal integrado a la operación de tu empresa. Para
-                crecer con seguridad y sin riesgos innecesarios.
+                Ejecutamos y organizamos la gestión administrativa del día a
+                día. Trámites, documentación y cumplimiento resueltos para que
+                tú te enfoques en hacer crecer el negocio.
               </p>
-              <ul className="service__features">
-                <li>Constitución de empresas y estructuras societarias</li>
-                <li>Contratos y acuerdos comerciales blindados</li>
-                <li>Cumplimiento regulatorio y normativo</li>
-                <li>Protección de propiedad intelectual</li>
-              </ul>
             </article>
           </div>
         </div>
@@ -368,13 +348,13 @@ export default function Home() {
               <p className="footer__col-title">Servicios</p>
               <ul className="footer__links">
                 <li>
-                  <Link href="#servicios">Gestión Empresarial</Link>
+                  <Link href="#servicios">Estructura y Gestión</Link>
                 </li>
                 <li>
-                  <Link href="#servicios">Legal</Link>
+                  <Link href="#servicios">Control Financiero</Link>
                 </li>
                 <li>
-                  <Link href="#servicios">Contabilidad</Link>
+                  <Link href="#servicios">Orden Administrativo</Link>
                 </li>
               </ul>
             </div>

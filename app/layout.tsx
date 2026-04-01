@@ -22,18 +22,19 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "Methodica — Gestión Empresarial, Legal y Contabilidad",
+  title: "Methodica — Estructura, Gestión y Control Financiero para Empresas",
   description:
-    "Gestión empresarial estratégica para empresas que quieren crecer con estructura. Integramos gestión, contabilidad y respaldo legal sin el costo de un departamento interno.",
+    "Gestión empresarial estratégica para empresas en crecimiento. Estructura organizacional, control financiero y orden administrativo sin el costo de un departamento interno.",
   keywords: [
     "gestión empresarial",
-    "contabilidad",
-    "asesoría legal",
+    "estructura empresarial",
+    "control financiero",
+    "orden administrativo",
     "consultoría empresarial",
-    "planificación estratégica",
+    "organización financiera",
     "optimización de procesos",
-    "declaraciones fiscales",
-    "constitución de empresas",
+    "gestión administrativa",
+    "empresas en crecimiento",
     "Perú",
     "Lima",
   ],
@@ -48,15 +49,15 @@ export const metadata: Metadata = {
     locale: "es_PE",
     url: "https://methodica.pe",
     siteName: "Methodica",
-    title: "Methodica — Gestión Empresarial, Legal y Contabilidad",
+    title: "Methodica — Estructura, Gestión y Control Financiero para Empresas",
     description:
-      "Tu equipo completo de gestión empresarial, contabilidad y legal. Sin el costo de un departamento interno. Estructura para crecer con claridad.",
+      "Tu equipo completo de gestión empresarial, control financiero y orden administrativo. Sin el costo de un departamento interno. Estructura para crecer con claridad.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Methodica — Gestión Empresarial, Legal y Contabilidad",
+    title: "Methodica — Estructura, Gestión y Control Financiero para Empresas",
     description:
-      "Gestión empresarial estratégica para empresas que quieren crecer con estructura.",
+      "Gestión empresarial estratégica para empresas en crecimiento. Estructura, control financiero y orden administrativo.",
   },
   robots: {
     index: true,
