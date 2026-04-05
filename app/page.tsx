@@ -20,7 +20,11 @@ const jsonLd = {
         "@type": "Country",
         name: "Perú",
       },
-      serviceType: ["Estructura y Gestión Empresarial", "Control y Organización Financiera", "Implementación y Orden Administrativo"],
+      serviceType: [
+        "Estructura y Gestión Empresarial",
+        "Control y Organización Financiera",
+        "Implementación y Orden Administrativo",
+      ],
       knowsLanguage: "es",
     },
     {
@@ -148,7 +152,9 @@ export default function Home() {
 
           <div className="pain__grid">
             <article className="pain__item">
-              <span className="pain__number" aria-hidden="true">01</span>
+              <span className="pain__number" aria-hidden="true">
+                01
+              </span>
               <div className="pain__content">
                 <h3>Procesos que no escalan contigo</h3>
                 <p>
@@ -160,7 +166,9 @@ export default function Home() {
             </article>
 
             <article className="pain__item">
-              <span className="pain__number" aria-hidden="true">02</span>
+              <span className="pain__number" aria-hidden="true">
+                02
+              </span>
               <div className="pain__content">
                 <h3>Decisiones empresariales sin información clara</h3>
                 <p>
@@ -171,7 +179,9 @@ export default function Home() {
             </article>
 
             <article className="pain__item">
-              <span className="pain__number" aria-hidden="true">03</span>
+              <span className="pain__number" aria-hidden="true">
+                03
+              </span>
               <div className="pain__content">
                 <h3>Multas y errores fiscales evitables</h3>
                 <p>
@@ -182,13 +192,14 @@ export default function Home() {
             </article>
 
             <article className="pain__item">
-              <span className="pain__number" aria-hidden="true">04</span>
+              <span className="pain__number" aria-hidden="true">
+                04
+              </span>
               <div className="pain__content">
-                <h3>Incertidumbre legal que frena tu crecimiento</h3>
+                <h3>Dependencia operative del founder</h3>
                 <p>
-                  Contratos mal redactados, propiedad intelectual desprotegida,
-                  regulaciones que cambian. Sin respaldo legal, cada paso hacia
-                  adelante es un riesgo.
+                  Cuando todo pasa por ti el crecimiento se vuelve insostenible
+                  y la empresa no logra avanzar con autonomía.
                 </p>
               </div>
             </article>
@@ -216,7 +227,11 @@ export default function Home() {
       </section>
 
       {/* SERVICES */}
-      <section className="services" id="servicios" aria-labelledby="services-heading">
+      <section
+        className="services"
+        id="servicios"
+        aria-labelledby="services-heading"
+      >
         <div className="container">
           <div className="services__header">
             <span className="services__label">Nuestros servicios</span>
@@ -229,8 +244,12 @@ export default function Home() {
 
           <div className="services__grid">
             <article className="service">
-              <span className="service__number" aria-hidden="true">01</span>
-              <h3 className="service__name">Estructura y Gestión Empresarial</h3>
+              <span className="service__number" aria-hidden="true">
+                01
+              </span>
+              <h3 className="service__name">
+                Estructura y Gestión Empresarial
+              </h3>
               <p className="service__desc">
                 Diseñamos el marco organizacional que tu empresa necesita para
                 operar con claridad. Definimos roles, flujos y sistemas para que
@@ -239,8 +258,12 @@ export default function Home() {
             </article>
 
             <article className="service">
-              <span className="service__number" aria-hidden="true">02</span>
-              <h3 className="service__name">Control y Organización Financiera</h3>
+              <span className="service__number" aria-hidden="true">
+                02
+              </span>
+              <h3 className="service__name">
+                Control y Organización Financiera
+              </h3>
               <p className="service__desc">
                 Ponemos orden en tus números para que tengas visibilidad real de
                 tu situación financiera. Información clara y al día para tomar
@@ -249,8 +272,12 @@ export default function Home() {
             </article>
 
             <article className="service">
-              <span className="service__number" aria-hidden="true">03</span>
-              <h3 className="service__name">Implementación y Orden Administrativo</h3>
+              <span className="service__number" aria-hidden="true">
+                03
+              </span>
+              <h3 className="service__name">
+                Implementación y Orden Administrativo
+              </h3>
               <p className="service__desc">
                 Ejecutamos y organizamos la gestión administrativa del día a
                 día. Trámites, documentación y cumplimiento resueltos para que
@@ -296,7 +323,7 @@ export default function Home() {
                   <li>Desorden administrativo</li>
                   <li>Falta de estructura operativa</li>
                   <li>Procesos improvisados</li>
-                  <li>Riesgos legales o fiscales</li>
+                  <li>Riesgos fiscales</li>
                   <li>Falta de claridad financiera</li>
                 </ul>
               </FaqItem>
@@ -313,7 +340,11 @@ export default function Home() {
       </section>
 
       {/* FINAL CTA */}
-      <section className="final-cta" id="contacto" aria-labelledby="cta-heading">
+      <section
+        className="final-cta"
+        id="contacto"
+        aria-labelledby="cta-heading"
+      >
         <div className="container">
           <h2 id="cta-heading" className="final-cta__text">
             <span className="light">El momento de actuar es</span>
@@ -324,7 +355,10 @@ export default function Home() {
             consulta gratuita y descubre cómo podemos transformar tu operación
             en las próximas semanas.
           </p>
-          <Link href="mailto:hola@methodica.com" className="btn btn--vermillion">
+          <Link
+            href="mailto:hola@methodica.com"
+            className="btn btn--vermillion"
+          >
             Agenda Tu Consulta
           </Link>
         </div>
@@ -369,7 +403,13 @@ export default function Home() {
                   <a href="tel:+51956285469">+51 956 285 469</a>
                 </li>
                 <li>
-                  <a href="https://wa.me/+51956285469" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+                  <a
+                    href="https://wa.me/+51956285469"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    WhatsApp
+                  </a>
                 </li>
               </ul>
             </div>
