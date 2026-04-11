@@ -247,10 +247,10 @@ body {
   color: #111111;
 }
 
-.hero__line-1 { font-size: clamp(4rem, 15vw, 12rem); display: block; }
+.hero__line-1 { font-size: clamp(3rem, 14vw, 12rem); display: block; }
 
 .hero__line-2 {
-  font-size: clamp(2.5rem, 8vw, 6rem);
+  font-size: clamp(1.75rem, 7vw, 6rem);
   font-weight: 200;
   display: block;
   margin-top: 0.5rem;
@@ -258,7 +258,7 @@ body {
 }
 
 .hero__line-3 {
-  font-size: clamp(4rem, 15vw, 12rem);
+  font-size: clamp(3rem, 14vw, 12rem);
   display: block;
   margin-top: -0.2rem;
 }

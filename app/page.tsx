@@ -147,7 +147,7 @@ export default function Home() {
             <h2 id="pain-heading" className="pain__pullquote">
               Mientras construyes tu negocio, la{" "}
               <strong>
-                gestión administrativa, los impuestos y la incertidumbre legal
+                gestión administrativa, los procesos y la falta de estructura
               </strong>{" "}
               consumen tu tiempo y tu capital.
             </h2>
@@ -199,7 +199,7 @@ export default function Home() {
                 04
               </span>
               <div className="pain__content">
-                <h3>Dependencia operative del founder</h3>
+                <h3>Dependencia operativa del founder</h3>
                 <p>
                   Cuando todo pasa por ti el crecimiento se vuelve insostenible
                   y la empresa no logra avanzar con autonomía.
