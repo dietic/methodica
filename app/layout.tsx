@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Fraunces, JetBrains_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
 
 const fraunces = Fraunces({
@@ -83,6 +84,7 @@ export default function RootLayout({
       <body>
         {children}
         <Analytics />
+        <GoogleAnalytics gaId="G-KHLEDXWY7V" />
       </body>
     </html>
   );
