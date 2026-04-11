@@ -6,8 +6,11 @@ const jsonLd = {
   "@graph": [
     {
       "@type": "ProfessionalService",
+      "@id": "https://methodica.pe/#organization",
       name: "Methodica",
       url: "https://methodica.pe",
+      logo: "https://methodica.pe/icon.png",
+      image: "https://methodica.pe/og-image.png",
       description:
         "Gestión empresarial estratégica para empresas en crecimiento. Estructura organizacional, control financiero y orden administrativo sin el costo de un departamento interno.",
       telephone: "+51956285469",

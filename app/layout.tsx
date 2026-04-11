@@ -45,6 +45,9 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://methodica.pe"),
   alternates: {
     canonical: "/",
+    languages: {
+      "es-PE": "/",
+    },
   },
   openGraph: {
     type: "website",
@@ -54,12 +57,21 @@ export const metadata: Metadata = {
     title: "Methodica — Estructura, Gestión y Control Financiero para Empresas",
     description:
       "Tu equipo completo de gestión empresarial, control financiero y orden administrativo. Sin el costo de un departamento interno. Estructura para crecer con claridad.",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Methodica",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Methodica — Estructura, Gestión y Control Financiero para Empresas",
     description:
       "Gestión empresarial estratégica para empresas en crecimiento. Estructura, control financiero y orden administrativo.",
+    images: ["/og-image.png"],
   },
   robots: {
     index: true,
