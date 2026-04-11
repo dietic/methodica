@@ -359,7 +359,7 @@ export default function Home() {
             en las próximas semanas.
           </p>
           <Link
-            href="mailto:hola@methodica.com"
+            href="mailto:hola@methodica.pe"
             className="btn btn--vermillion"
           >
             Agenda Tu Consulta
@@ -403,11 +403,8 @@ export default function Home() {
                   <a href="mailto:hola@methodica.pe">hola@methodica.pe</a>
                 </li>
                 <li>
-                  <a href="tel:+51956285469">+51 956 285 469</a>
-                </li>
-                <li>
                   <a
-                    href="https://wa.me/+51956285469"
+                    href="https://wa.me/51956285469"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
