@@ -23,7 +23,7 @@ export async function sendContactForm(formData: FormData) {
   try {
     await transporter.sendMail({
       from: `"Methodica Web" <${process.env.GMAIL_USER}>`,
-      to: process.env.GMAIL_USER,
+      to: "hola@methodica.pe",
       replyTo: email,
       subject: `Consulta de ${name}${company ? ` — ${company}` : ""}`,
       text: `Nombre: ${name}\nEmail: ${email}${company ? `\nEmpresa: ${company}` : ""}\n\nMensaje:\n${message}`,
