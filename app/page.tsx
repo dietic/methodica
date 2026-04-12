@@ -1,5 +1,6 @@
 import Link from "next/link";
 import FaqItem from "./components/FaqItem";
+import ContactForm from "./components/ContactForm";
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -312,11 +313,12 @@ export default function Home() {
               </FaqItem>
 
               <FaqItem question="¿Trabajan con empresas de cualquier tamaño?">
-                Trabajamos principalmente con startups, negocios digitales y
-                empresas de servicios que están en etapa de crecimiento y
-                necesitan estructura para escalar con orden. Nuestro enfoque
-                está pensado para empresas que quieren profesionalizar su
-                operación antes de que el desorden se convierta en un problema.
+                Trabajamos principalmente con startups, emprendimientos,
+                negocios digitales y empresas de servicios que están en etapa de
+                crecimiento y necesitan estructura para escalar con orden.
+                Nuestro enfoque está pensado para empresas que quieren
+                profesionalizar su operación antes de que el desorden se
+                convierta en un problema.
               </FaqItem>
 
               <FaqItem question="¿Qué tipo de problemas ayuda a resolver Methodica?">
@@ -342,28 +344,29 @@ export default function Home() {
         </div>
       </section>
 
-      {/* FINAL CTA */}
+      {/* FINAL CTA + CONTACT FORM */}
       <section
         className="final-cta"
         id="contacto"
         aria-labelledby="cta-heading"
       >
         <div className="container">
-          <h2 id="cta-heading" className="final-cta__text">
-            <span className="light">El momento de actuar es</span>
-            AHORA<span className="text-vermillion">.</span>
-          </h2>
-          <p className="final-cta__sub">
-            Cada día sin estructura le cuesta dinero a tu empresa. Agenda una
-            consulta gratuita y descubre cómo podemos transformar tu operación
-            en las próximas semanas.
-          </p>
-          <Link
-            href="mailto:hola@methodica.pe"
-            className="btn btn--vermillion"
-          >
-            Agenda Tu Consulta
-          </Link>
+          <div className="final-cta__split">
+            <div className="final-cta__left">
+              <h2 id="cta-heading" className="final-cta__text">
+                <span className="light">El momento de actuar es</span>
+                AHORA<span className="text-vermillion">.</span>
+              </h2>
+              <p className="final-cta__sub">
+                Cada día sin estructura le cuesta dinero a tu empresa. Agenda
+                una consulta gratuita y descubre cómo podemos transformar tu
+                operación en las próximas semanas.
+              </p>
+            </div>
+            <div className="final-cta__right">
+              <ContactForm />
+            </div>
+          </div>
         </div>
       </section>
 
