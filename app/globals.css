@@ -618,6 +618,203 @@ body {
 }
 
 /* ═══════════════════════════════════════════
+   SERVICES — COMPLEMENT LINE
+   ═══════════════════════════════════════════ */
+.services__complement {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(17, 17, 17, 0.08);
+  font-family: var(--font-jetbrains), "JetBrains Mono", monospace;
+  font-size: 0.82rem;
+  line-height: 1.9;
+  color: rgba(17, 17, 17, 0.6);
+  max-width: 720px;
+}
+
+.services__complement strong {
+  color: #111111;
+  font-weight: 700;
+}
+
+@media (min-width: 768px) {
+  .services__complement {
+    margin-top: 4rem;
+  }
+}
+
+/* ═══════════════════════════════════════════
+   PROCESO / CÓMO TRABAJAMOS
+   ═══════════════════════════════════════════ */
+.process {
+  padding: 6rem 0;
+  background: #fafaf8;
+}
+
+.process__header {
+  margin-bottom: 4rem;
+}
+
+.process__label {
+  font-family: var(--font-jetbrains), "JetBrains Mono", monospace;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: rgba(17, 17, 17, 0.35);
+  margin-bottom: 2rem;
+  display: block;
+}
+
+.process__title {
+  font-family: var(--font-fraunces), "Fraunces", serif;
+  font-weight: 900;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+}
+
+.process__grid {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+}
+
+.process__step {
+  padding: 2.5rem 0;
+  border-top: 1px solid rgba(17, 17, 17, 0.12);
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.process__step:last-child {
+  border-bottom: 1px solid rgba(17, 17, 17, 0.12);
+}
+
+.process__number {
+  font-family: var(--font-fraunces), "Fraunces", serif;
+  font-weight: 900;
+  font-size: 2.75rem;
+  line-height: 1;
+  color: #f0eee9;
+  letter-spacing: -0.03em;
+}
+
+.process__content h3 {
+  font-family: var(--font-fraunces), "Fraunces", serif;
+  font-weight: 800;
+  font-size: 1.35rem;
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.02em;
+}
+
+.process__content p {
+  font-family: var(--font-jetbrains), "JetBrains Mono", monospace;
+  font-size: 0.82rem;
+  color: rgba(17, 17, 17, 0.55);
+  line-height: 1.85;
+  max-width: 520px;
+}
+
+@media (min-width: 768px) {
+  .process {
+    padding: 8rem 0;
+  }
+  .process__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 0 4rem;
+  }
+  .process__step {
+    padding: 3rem 0;
+  }
+}
+
+/* ═══════════════════════════════════════════
+   SOBRE METHODICA / FOUNDER
+   ═══════════════════════════════════════════ */
+.about {
+  padding: 6rem 0;
+  background: #ffffff;
+}
+
+.about__layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+}
+
+.about__label {
+  font-family: var(--font-jetbrains), "JetBrains Mono", monospace;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: rgba(17, 17, 17, 0.35);
+  margin-bottom: 2rem;
+  display: block;
+}
+
+.about__title {
+  font-family: var(--font-fraunces), "Fraunces", serif;
+  font-weight: 900;
+  font-size: clamp(1.75rem, 3.5vw, 2.75rem);
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+}
+
+.about__bio {
+  font-family: var(--font-jetbrains), "JetBrains Mono", monospace;
+  font-size: 0.85rem;
+  line-height: 1.9;
+  color: rgba(17, 17, 17, 0.65);
+  max-width: 520px;
+}
+
+.about__bio + .about__bio {
+  margin-top: 1.25rem;
+}
+
+.about__bio--placeholder {
+  color: rgba(17, 17, 17, 0.3);
+  font-style: italic;
+}
+
+.about__linkedin {
+  display: inline-block;
+  margin-top: 1.5rem;
+  font-family: var(--font-jetbrains), "JetBrains Mono", monospace;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #111111;
+  text-decoration: none;
+  border-bottom: 1px solid #111111;
+  padding-bottom: 0.25rem;
+  transition:
+    color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.about__linkedin:hover {
+  color: #f0eee9;
+  border-bottom-color: #f0eee9;
+}
+
+@media (min-width: 768px) {
+  .about {
+    padding: 8rem 0;
+  }
+  .about__layout {
+    grid-template-columns: 1fr 1.2fr;
+    gap: 5rem;
+    align-items: start;
+  }
+}
+
+/* ═══════════════════════════════════════════
    FAQ
    ═══════════════════════════════════════════ */
 .faq {
@@ -872,7 +1069,77 @@ body {
 
 .contact-form__textarea {
   resize: vertical;
-  min-height: 6rem;
+  min-height: 5rem;
+}
+
+.contact-form__fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-form__fieldset > .contact-form__label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.contact-form__radios {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin-top: 0.25rem;
+}
+
+.contact-form__radio {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: var(--font-jetbrains), "JetBrains Mono", monospace;
+  font-size: 0.82rem;
+  color: #111111;
+  cursor: pointer;
+  padding: 0.5rem 0;
+  line-height: 1.5;
+  transition: color 0.2s ease;
+}
+
+.contact-form__radio:hover {
+  color: rgba(17, 17, 17, 0.7);
+}
+
+.contact-form__radio input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 1rem;
+  height: 1rem;
+  border: 1.5px solid rgba(17, 17, 17, 0.3);
+  border-radius: 50%;
+  background: #ffffff;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+  flex-shrink: 0;
+  position: relative;
+  margin: 0;
+}
+
+.contact-form__radio input[type="radio"]:checked {
+  border-color: #111111;
+}
+
+.contact-form__radio input[type="radio"]:checked::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: #111111;
+}
+
+.contact-form__radio:hover input[type="radio"] {
+  border-color: #111111;
 }
 
 .contact-form__submit {

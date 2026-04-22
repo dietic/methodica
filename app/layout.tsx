@@ -24,20 +24,22 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "Methodica — Estructura, Gestión y Control Financiero para Empresas",
+  title:
+    "Methodica — Consultoría de Gestión Empresarial para Empresas en Crecimiento en Perú",
   description:
-    "Gestión empresarial estratégica para empresas en crecimiento. Estructura organizacional, control financiero y orden administrativo sin el costo de un departamento interno.",
+    "Diseñamos y operamos la estructura, gestión y procesos de startups y empresas de servicios en Perú. Para founders que quieren crecer con orden y dejar de ser cuello de botella — sin contratar un departamento interno.",
   keywords: [
+    "consultoría de gestión empresarial",
+    "consultoría empresarial Perú",
     "gestión empresarial",
     "estructura empresarial",
-    "control financiero",
-    "orden administrativo",
-    "consultoría empresarial",
-    "organización financiera",
-    "optimización de procesos",
-    "gestión administrativa",
-    "empresas en crecimiento",
-    "Perú",
+    "consultoría para startups Perú",
+    "consultoría para empresas en crecimiento",
+    "optimización de procesos empresariales",
+    "profesionalización empresarial",
+    "fractional COO Perú",
+    "ordenar empresa",
+    "operaciones empresariales",
     "Lima",
   ],
   authors: [{ name: "Methodica" }],
@@ -54,23 +56,25 @@ export const metadata: Metadata = {
     locale: "es_PE",
     url: "https://methodica.pe",
     siteName: "Methodica",
-    title: "Methodica — Estructura, Gestión y Control Financiero para Empresas",
+    title:
+      "Methodica — Consultoría de Gestión Empresarial para Empresas en Crecimiento en Perú",
     description:
-      "Tu equipo completo de gestión empresarial, control financiero y orden administrativo. Sin el costo de un departamento interno. Estructura para crecer con claridad.",
+      "Diseñamos y operamos la estructura que tu empresa necesita para escalar con orden. Tu equipo completo de gestión empresarial — sin el costo de un departamento interno.",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Methodica",
+        alt: "Methodica — Consultoría de gestión empresarial en Perú",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Methodica — Estructura, Gestión y Control Financiero para Empresas",
+    title:
+      "Methodica — Consultoría de Gestión Empresarial para Empresas en Crecimiento en Perú",
     description:
-      "Gestión empresarial estratégica para empresas en crecimiento. Estructura, control financiero y orden administrativo.",
+      "Diseñamos y operamos la estructura, gestión y procesos de empresas en crecimiento en Perú. Para founders que quieren dejar de ser cuello de botella.",
     images: ["/og-image.png"],
   },
   robots: {
