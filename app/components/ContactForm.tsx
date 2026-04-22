@@ -3,6 +3,13 @@
 import { useState, type FormEvent } from "react";
 import { sendContactForm } from "../actions/contact";
 
+const INTEREST_OPTIONS = [
+  { value: "procesos", label: "Ordenar procesos y operación" },
+  { value: "visibilidad", label: "Visibilidad financiera y decisiones" },
+  { value: "cuello-botella", label: "Dejar de ser cuello de botella" },
+  { value: "conversar", label: "Quiero conversar primero" },
+];
+
 export default function ContactForm() {
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">(
     "idle"
@@ -72,17 +79,38 @@ export default function ContactForm() {
         />
       </div>
 
+      <fieldset className="contact-form__field contact-form__fieldset">
+        <legend className="contact-form__label">¿Qué te trae?</legend>
+        <div className="contact-form__radios">
+          {INTEREST_OPTIONS.map((option) => (
+            <label
+              key={option.value}
+              className="contact-form__radio"
+              htmlFor={`cf-interest-${option.value}`}
+            >
+              <input
+                id={`cf-interest-${option.value}`}
+                type="radio"
+                name="interest"
+                value={option.value}
+                required
+              />
+              <span>{option.label}</span>
+            </label>
+          ))}
+        </div>
+      </fieldset>
+
       <div className="contact-form__field">
         <label htmlFor="cf-message" className="contact-form__label">
-          Mensaje
+          Mensaje <span className="contact-form__optional">opcional</span>
         </label>
         <textarea
           id="cf-message"
           name="message"
-          required
-          rows={4}
+          rows={3}
           className="contact-form__input contact-form__textarea"
-          placeholder="Cuéntanos sobre tu empresa y cómo podemos ayudarte"
+          placeholder="Cuéntanos algo sobre tu empresa (opcional)"
         />
       </div>
 
@@ -100,7 +128,9 @@ export default function ContactForm() {
           className="btn btn--vermillion contact-form__submit"
           disabled={status === "sending"}
         >
-          {status === "sending" ? "Enviando..." : "Enviar Mensaje"}
+          {status === "sending"
+            ? "Enviando..."
+            : "Agendar Consulta Gratuita"}
         </button>
       )}
     </form>
