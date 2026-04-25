@@ -168,6 +168,12 @@ export default function Home() {
           </div>
         </section>
 
+        <div className="container">
+          <div className="hero-divider" aria-hidden="true">
+            <span className="hero-divider__dot"></span>
+          </div>
+        </div>
+
         {/* SERVICES */}
         <section
           className="services"
@@ -183,11 +189,6 @@ export default function Home() {
                   Sin el costo de un departamento interno.
                 </span>
               </h2>
-              <p className="services__sub">
-                Diseñamos la estructura, ordenamos los procesos y operamos la
-                gestión administrativa. Contable y legal vía aliados estratégicos
-                — un solo punto de contacto.
-              </p>
             </div>
 
             <div className="services__grid">
