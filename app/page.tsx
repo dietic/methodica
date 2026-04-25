@@ -49,7 +49,7 @@ const jsonLd = {
             "@type": "Offer",
             itemOffered: {
               "@type": "Service",
-              name: "Gestión Estratégica & Administrativa",
+              name: "Gestión Estratégica y Administrativa",
               description:
                 "Nos convertimos en tu brazo derecho administrativo. Organizamos la estructura de tu empresa, desde la gestión de proveedores hasta el control de flujos de caja.",
             },
@@ -58,7 +58,7 @@ const jsonLd = {
             "@type": "Offer",
             itemOffered: {
               "@type": "Service",
-              name: "Asesoría Contable & Tributaria",
+              name: "Asesoría Contable y Tributaria",
               description:
                 "A través de nuestra red de aliados estratégicos, garantizamos que tu empresa cumpla con todas las normativas tributarias de manera eficiente y puntual.",
             },
@@ -218,7 +218,7 @@ export default function Home() {
                   02
                 </span>
                 <h3 className="service__name">
-                  Gestión Estratégica &amp; Administrativa
+                  Gestión Estratégica y Administrativa
                 </h3>
                 <p className="service__desc">
                   Nos convertimos en tu brazo derecho administrativo.
@@ -232,7 +232,7 @@ export default function Home() {
                   03
                 </span>
                 <h3 className="service__name">
-                  Asesoría Contable &amp; Tributaria
+                  Asesoría Contable y Tributaria
                 </h3>
                 <p className="service__desc">
                   A través de nuestra red de aliados estratégicos, garantizamos
