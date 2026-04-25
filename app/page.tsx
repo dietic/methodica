@@ -173,16 +173,8 @@ export default function Home() {
         </div>
 
         {/* PAIN / PROBLEM */}
-        <section className="pain" id="problema" aria-labelledby="pain-heading">
+        <section className="pain" id="problema">
           <div className="container">
-            <div className="pain__header">
-              <h2 id="pain-heading" className="pain__pullquote">
-                Cuanto mejor van las ventas,{" "}
-                <strong>más tensión interna se genera</strong>. Sin estructura,
-                el crecimiento multiplica el desorden.
-              </h2>
-            </div>
-
             <div className="pain__grid">
               <article className="pain__item">
                 <span className="pain__number" aria-hidden="true">

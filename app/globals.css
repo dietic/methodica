@@ -371,28 +371,11 @@ body {
 .pain {
   padding: 6rem 0;
 }
-.pain__header {
-  margin-bottom: 4rem;
-}
-
-.pain__pullquote {
-  font-family: var(--font-fraunces), "Fraunces", serif;
-  font-weight: 200;
-  font-size: clamp(2rem, 5vw, 4.5rem);
-  line-height: 1.15;
-  letter-spacing: -0.02em;
-  max-width: 900px;
-}
-
-.pain__pullquote strong {
-  font-weight: 900;
-}
 
 .pain__grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;
-  margin-top: 4rem;
 }
 
 .pain__item {
