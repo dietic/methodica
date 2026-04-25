@@ -359,7 +359,7 @@ body {
 
 @media (min-width: 1024px) {
   .hero__grid {
-    grid-template-columns: minmax(0, 1fr) clamp(20rem, 30%, 28rem);
+    grid-template-columns: minmax(0, 4fr) minmax(13rem, 1fr);
     gap: 4rem;
     align-items: end;
   }

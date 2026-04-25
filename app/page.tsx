@@ -147,10 +147,10 @@ export default function Home() {
             <div className="hero__grid">
               <div className="hero__left">
                 <h1 id="hero-heading" className="hero__headline animate-fade-in">
-                  <span className="hero__line-1">TU</span>{" "}
-                  <span className="hero__line-2">empresa, sin</span>{" "}
+                  <span className="hero__line-1">CRECE</span>{" "}
+                  <span className="hero__line-2">con orden, claridad y</span>{" "}
                   <span className="hero__line-3">
-                    DEPENDER DE TI<span className="hero__dot">.</span>
+                    CONFIANZA<span className="hero__dot">.</span>
                   </span>
                 </h1>
               </div>
