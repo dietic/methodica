@@ -313,21 +313,21 @@ body {
 }
 
 .hero__line-1 {
-  font-size: clamp(3rem, 14vw, 12rem);
+  font-size: clamp(3rem, 12vw, 10rem);
   display: block;
 }
 
 .hero__line-2 {
-  font-size: clamp(1.75rem, 7vw, 6rem);
+  font-size: clamp(1.75rem, 6vw, 5rem);
   font-weight: 200;
   display: block;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
-  color: rgba(17, 17, 17, 0.45);
+  color: rgba(17, 17, 17, 0.55);
 }
 
 .hero__line-3 {
-  font-size: clamp(3rem, 14vw, 12rem);
+  font-size: clamp(3rem, 12vw, 10rem);
   display: block;
   margin-top: -0.2rem;
 }
@@ -345,9 +345,9 @@ body {
 
 .hero__sub {
   font-family: var(--font-jetbrains), "JetBrains Mono", monospace;
-  font-size: clamp(0.75rem, 1.2vw, 0.95rem);
+  font-size: clamp(0.8rem, 1.2vw, 0.95rem);
   line-height: 1.8;
-  color: rgba(17, 17, 17, 0.45);
+  color: rgba(17, 17, 17, 0.65);
   max-width: 480px;
 }
 
@@ -355,16 +355,13 @@ body {
   .hero {
     padding-bottom: 6rem;
   }
-  .hero__grid {
-    grid-template-columns: 2fr 1fr;
-    gap: 4rem;
-    align-items: end;
-  }
 }
 
 @media (min-width: 1024px) {
   .hero__grid {
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: minmax(0, 1fr) clamp(20rem, 30%, 28rem);
+    gap: 4rem;
+    align-items: end;
   }
 }
 
@@ -426,7 +423,7 @@ body {
 
 .pain__content p {
   font-size: 0.85rem;
-  color: rgba(17, 17, 17, 0.45);
+  color: rgba(17, 17, 17, 0.65);
   line-height: 1.7;
   max-width: 500px;
 }
@@ -452,57 +449,6 @@ body {
 }
 
 /* ═══════════════════════════════════════════
-   SOLUTION STATEMENT
-   ═══════════════════════════════════════════ */
-.solution {
-  background: #111111;
-  color: #ffffff;
-  padding: 8rem 0;
-  position: relative;
-  overflow: hidden;
-}
-
-.solution__text {
-  font-family: var(--font-fraunces), "Fraunces", serif;
-  font-weight: 900;
-  font-size: clamp(2.5rem, 7vw, 7rem);
-  line-height: 1.05;
-  letter-spacing: -0.04em;
-  max-width: 1200px;
-}
-
-.solution__text .light {
-  font-weight: 200;
-  color: rgba(255, 255, 255, 0.45);
-}
-
-.solution__text .accent {
-  color: #f0eee9;
-}
-
-.solution__sub {
-  font-family: var(--font-jetbrains), "JetBrains Mono", monospace;
-  font-size: 0.85rem;
-  color: rgba(255, 255, 255, 0.5);
-  margin-top: 3rem;
-  max-width: 550px;
-  line-height: 1.8;
-}
-
-.solution__line {
-  width: 80px;
-  height: 3px;
-  background: #f0eee9;
-  margin-top: 3rem;
-}
-
-@media (min-width: 768px) {
-  .solution {
-    padding: 12rem 0;
-  }
-}
-
-/* ═══════════════════════════════════════════
    SERVICES
    ═══════════════════════════════════════════ */
 .services {
@@ -518,7 +464,7 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.2em;
-  color: rgba(17, 17, 17, 0.35);
+  color: rgba(17, 17, 17, 0.7);
   margin-bottom: 2rem;
   display: block;
 }
@@ -529,6 +475,22 @@ body {
   font-size: clamp(2rem, 4vw, 3.5rem);
   letter-spacing: -0.03em;
   line-height: 1.1;
+  max-width: 900px;
+}
+
+.services__title-light {
+  font-weight: 200;
+  color: rgba(17, 17, 17, 0.5);
+  display: block;
+}
+
+.services__sub {
+  font-family: var(--font-jetbrains), "JetBrains Mono", monospace;
+  font-size: 0.85rem;
+  color: rgba(17, 17, 17, 0.65);
+  line-height: 1.8;
+  max-width: 600px;
+  margin-top: 1.75rem;
 }
 
 .services__grid {
@@ -570,7 +532,7 @@ body {
 .service__desc {
   font-family: var(--font-jetbrains), "JetBrains Mono", monospace;
   font-size: 0.8rem;
-  color: rgba(17, 17, 17, 0.45);
+  color: rgba(17, 17, 17, 0.65);
   line-height: 1.8;
   margin-bottom: 1rem;
 }
@@ -618,31 +580,6 @@ body {
 }
 
 /* ═══════════════════════════════════════════
-   SERVICES — COMPLEMENT LINE
-   ═══════════════════════════════════════════ */
-.services__complement {
-  margin-top: 3rem;
-  padding-top: 2rem;
-  border-top: 1px solid rgba(17, 17, 17, 0.08);
-  font-family: var(--font-jetbrains), "JetBrains Mono", monospace;
-  font-size: 0.82rem;
-  line-height: 1.9;
-  color: rgba(17, 17, 17, 0.6);
-  max-width: 720px;
-}
-
-.services__complement strong {
-  color: #111111;
-  font-weight: 700;
-}
-
-@media (min-width: 768px) {
-  .services__complement {
-    margin-top: 4rem;
-  }
-}
-
-/* ═══════════════════════════════════════════
    PROCESO / CÓMO TRABAJAMOS
    ═══════════════════════════════════════════ */
 .process {
@@ -660,7 +597,7 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.2em;
-  color: rgba(17, 17, 17, 0.35);
+  color: rgba(17, 17, 17, 0.7);
   margin-bottom: 2rem;
   display: block;
 }
@@ -713,7 +650,7 @@ body {
 .process__content p {
   font-family: var(--font-jetbrains), "JetBrains Mono", monospace;
   font-size: 0.82rem;
-  color: rgba(17, 17, 17, 0.55);
+  color: rgba(17, 17, 17, 0.65);
   line-height: 1.85;
   max-width: 520px;
 }
@@ -728,89 +665,6 @@ body {
   }
   .process__step {
     padding: 3rem 0;
-  }
-}
-
-/* ═══════════════════════════════════════════
-   SOBRE METHODICA / FOUNDER
-   ═══════════════════════════════════════════ */
-.about {
-  padding: 6rem 0;
-  background: #ffffff;
-}
-
-.about__layout {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 3rem;
-}
-
-.about__label {
-  font-family: var(--font-jetbrains), "JetBrains Mono", monospace;
-  font-size: 0.7rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-  color: rgba(17, 17, 17, 0.35);
-  margin-bottom: 2rem;
-  display: block;
-}
-
-.about__title {
-  font-family: var(--font-fraunces), "Fraunces", serif;
-  font-weight: 900;
-  font-size: clamp(1.75rem, 3.5vw, 2.75rem);
-  letter-spacing: -0.03em;
-  line-height: 1.15;
-}
-
-.about__bio {
-  font-family: var(--font-jetbrains), "JetBrains Mono", monospace;
-  font-size: 0.85rem;
-  line-height: 1.9;
-  color: rgba(17, 17, 17, 0.65);
-  max-width: 520px;
-}
-
-.about__bio + .about__bio {
-  margin-top: 1.25rem;
-}
-
-.about__bio--placeholder {
-  color: rgba(17, 17, 17, 0.3);
-  font-style: italic;
-}
-
-.about__linkedin {
-  display: inline-block;
-  margin-top: 1.5rem;
-  font-family: var(--font-jetbrains), "JetBrains Mono", monospace;
-  font-size: 0.75rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.15em;
-  color: #111111;
-  text-decoration: none;
-  border-bottom: 1px solid #111111;
-  padding-bottom: 0.25rem;
-  transition:
-    color 0.3s ease,
-    border-color 0.3s ease;
-}
-
-.about__linkedin:hover {
-  color: #f0eee9;
-  border-bottom-color: #f0eee9;
-}
-
-@media (min-width: 768px) {
-  .about {
-    padding: 8rem 0;
-  }
-  .about__layout {
-    grid-template-columns: 1fr 1.2fr;
-    gap: 5rem;
-    align-items: start;
   }
 }
 
@@ -839,7 +693,7 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.2em;
-  color: rgba(17, 17, 17, 0.35);
+  color: rgba(17, 17, 17, 0.7);
   margin-bottom: 2rem;
   display: block;
 }
@@ -911,7 +765,7 @@ body {
   padding-bottom: 2rem;
   font-family: var(--font-jetbrains), "JetBrains Mono", monospace;
   font-size: 0.82rem;
-  color: rgba(17, 17, 17, 0.45);
+  color: rgba(17, 17, 17, 0.65);
   line-height: 1.8;
   max-width: 650px;
 }
@@ -958,7 +812,7 @@ body {
 .final-cta__text .light {
   font-weight: 200;
   display: block;
-  color: rgba(17, 17, 17, 0.45);
+  color: rgba(17, 17, 17, 0.6);
   font-size: 0.5em;
   margin-bottom: 0.5rem;
   letter-spacing: 0;
@@ -967,7 +821,7 @@ body {
 .final-cta__sub {
   font-family: var(--font-jetbrains), "JetBrains Mono", monospace;
   font-size: 0.85rem;
-  color: rgba(17, 17, 17, 0.45);
+  color: rgba(17, 17, 17, 0.65);
   max-width: 500px;
   margin: 0 auto 3rem;
   line-height: 1.8;
@@ -1034,14 +888,14 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.2em;
-  color: rgba(17, 17, 17, 0.4);
+  color: rgba(17, 17, 17, 0.7);
 }
 
 .contact-form__optional {
   font-weight: 400;
   text-transform: none;
   letter-spacing: 0.05em;
-  color: rgba(17, 17, 17, 0.25);
+  color: rgba(17, 17, 17, 0.7);
 }
 
 .contact-form__input {
@@ -1246,7 +1100,7 @@ body {
 .footer__copy {
   font-family: var(--font-jetbrains), "JetBrains Mono", monospace;
   font-size: 0.7rem;
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .footer__legal {
@@ -1257,7 +1111,7 @@ body {
 .footer__legal a {
   font-family: var(--font-jetbrains), "JetBrains Mono", monospace;
   font-size: 0.7rem;
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 0.6);
   text-decoration: none;
   transition: color 0.3s ease;
 }

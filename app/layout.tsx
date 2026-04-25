@@ -24,17 +24,15 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title:
-    "Methodica — Consultoría de Gestión Empresarial para Empresas en Crecimiento en Perú",
+  title: "Methodica — Consultoría de Gestión Empresarial en Perú",
   description:
-    "Diseñamos y operamos la estructura, gestión y procesos de startups y empresas de servicios en Perú. Para founders que quieren crecer con orden y dejar de ser cuello de botella — sin contratar un departamento interno.",
+    "Diseñamos y operamos la estructura, procesos y gestión administrativa de startups y empresas de servicios en Perú. Tu equipo completo sin un departamento interno.",
   keywords: [
     "consultoría de gestión empresarial",
     "consultoría empresarial Perú",
     "gestión empresarial",
     "estructura empresarial",
     "consultoría para startups Perú",
-    "consultoría para empresas en crecimiento",
     "optimización de procesos empresariales",
     "profesionalización empresarial",
     "fractional COO Perú",
@@ -56,10 +54,9 @@ export const metadata: Metadata = {
     locale: "es_PE",
     url: "https://methodica.pe",
     siteName: "Methodica",
-    title:
-      "Methodica — Consultoría de Gestión Empresarial para Empresas en Crecimiento en Perú",
+    title: "Methodica — Consultoría de Gestión Empresarial en Perú",
     description:
-      "Diseñamos y operamos la estructura que tu empresa necesita para escalar con orden. Tu equipo completo de gestión empresarial — sin el costo de un departamento interno.",
+      "Tu equipo completo de gestión empresarial — sin el costo de un departamento interno. Estructura, procesos y operación para startups y empresas en Perú.",
     images: [
       {
         url: "/og-image.png",
@@ -71,10 +68,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title:
-      "Methodica — Consultoría de Gestión Empresarial para Empresas en Crecimiento en Perú",
+    title: "Methodica — Consultoría de Gestión Empresarial en Perú",
     description:
-      "Diseñamos y operamos la estructura, gestión y procesos de empresas en crecimiento en Perú. Para founders que quieren dejar de ser cuello de botella.",
+      "Diseñamos y operamos la estructura, procesos y gestión de empresas en crecimiento en Perú. Tu equipo completo sin un departamento interno.",
     images: ["/og-image.png"],
   },
   robots: {
