@@ -234,7 +234,7 @@ export default function Home() {
               </Link>
               <p className="footer__desc">
                 Consultoría de gestión empresarial para startups y empresas de
-                servicios en crecimiento en Perú.
+                servicios.
               </p>
             </div>
 
@@ -242,13 +242,15 @@ export default function Home() {
               <p className="footer__col-title">Servicios</p>
               <ul className="footer__links">
                 <li>
-                  <Link href="#servicios">Estructura y Gestión</Link>
+                  <Link href="#servicios">Optimización de Procesos</Link>
                 </li>
                 <li>
-                  <Link href="#servicios">Orden Administrativo</Link>
+                  <Link href="#servicios">
+                    Gestión Estratégica y Administrativa
+                  </Link>
                 </li>
                 <li>
-                  <Link href="#servicios">Contable y Legal (aliados)</Link>
+                  <Link href="#servicios">Asesoría Contable y Tributaria</Link>
                 </li>
               </ul>
             </div>
