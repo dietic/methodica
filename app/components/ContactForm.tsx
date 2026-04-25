@@ -6,7 +6,6 @@ import { sendContactForm } from "../actions/contact";
 const INTEREST_OPTIONS = [
   { value: "procesos", label: "Ordenar procesos y operación" },
   { value: "visibilidad", label: "Visibilidad financiera y decisiones" },
-  { value: "cuello-botella", label: "Dejar de ser cuello de botella" },
   { value: "conversar", label: "Quiero conversar primero" },
 ];
 

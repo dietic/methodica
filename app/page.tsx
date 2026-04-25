@@ -1,5 +1,4 @@
 import Link from "next/link";
-import FaqItem from "./components/FaqItem";
 import ContactForm from "./components/ContactForm";
 
 const jsonLd = {
@@ -72,43 +71,6 @@ const jsonLd = {
       url: "https://methodica.pe",
       inLanguage: "es",
     },
-    {
-      "@type": "FAQPage",
-      mainEntity: [
-        {
-          "@type": "Question",
-          name: "¿Qué pasa en la primera consulta?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "30 minutos, sin costo y sin compromiso. Entendemos cómo funciona tu empresa hoy: estructura, procesos y desafíos. Salimos con una lectura inicial de qué tendría sentido ordenar primero.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "¿Para qué tipo de empresas es Methodica?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Startups, negocios digitales y empresas de servicios en Perú en etapa de crecimiento, que quieren profesionalizar su operación antes de que el desorden se vuelva un problema.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "¿En cuánto tiempo veo resultados?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Orden operativo visible en 2 a 4 semanas. En 60 a 90 días tu empresa funciona con menos dependencia de ti, con procesos definidos y visibilidad clara de la operación.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "¿Cómo manejan lo contable y legal?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Methodica se enfoca en gestión empresarial y operaciones. El respaldo contable y legal lo integramos vía aliados estratégicos — un solo punto de contacto, todo coordinado.",
-          },
-        },
-      ],
-    },
   ],
 };
 
@@ -129,9 +91,6 @@ export default function Home() {
           <ul className="nav__links">
             <li>
               <Link href="#servicios">Servicios</Link>
-            </li>
-            <li>
-              <Link href="#faq">FAQ</Link>
             </li>
             <li>
               <Link
@@ -241,47 +200,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* FAQ */}
-        <section className="faq" id="faq" aria-labelledby="faq-heading">
-          <div className="container">
-            <div className="faq__layout">
-              <div className="faq__header">
-                <span className="faq__label">Preguntas frecuentes</span>
-                <h2 id="faq-heading" className="faq__title">
-                  Lo que necesitas saber antes del siguiente paso.
-                </h2>
-              </div>
-
-              <div className="faq__list">
-                <FaqItem question="¿Qué pasa en la primera consulta?">
-                  30 minutos, sin costo y sin compromiso. Entendemos cómo
-                  funciona tu empresa hoy: estructura, procesos y desafíos.
-                  Salimos con una lectura inicial de qué tendría sentido ordenar
-                  primero.
-                </FaqItem>
-
-                <FaqItem question="¿Para qué tipo de empresas es Methodica?">
-                  Startups, negocios digitales y empresas de servicios en Perú
-                  en etapa de crecimiento, que quieren profesionalizar su
-                  operación antes de que el desorden se vuelva un problema.
-                </FaqItem>
-
-                <FaqItem question="¿En cuánto tiempo veo resultados?">
-                  Orden operativo visible en 2 a 4 semanas. En 60 a 90 días tu
-                  empresa funciona con menos dependencia de ti, con procesos
-                  definidos y visibilidad clara de la operación.
-                </FaqItem>
-
-                <FaqItem question="¿Cómo manejan lo contable y legal?">
-                  Methodica se enfoca en gestión empresarial y operaciones. El
-                  respaldo contable y legal lo integramos vía aliados
-                  estratégicos — un solo punto de contacto, todo coordinado.
-                </FaqItem>
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* FINAL CTA + CONTACT FORM */}
         <section
           className="final-cta"
@@ -340,9 +258,6 @@ export default function Home() {
             <div>
               <p className="footer__col-title">Empresa</p>
               <ul className="footer__links">
-                <li>
-                  <Link href="#faq">FAQ</Link>
-                </li>
                 <li>
                   <Link href="#contacto">Consulta Gratuita</Link>
                 </li>

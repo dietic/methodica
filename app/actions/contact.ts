@@ -5,7 +5,6 @@ import nodemailer from "nodemailer";
 const INTEREST_LABELS: Record<string, string> = {
   procesos: "Ordenar procesos y operación",
   visibilidad: "Visibilidad financiera y decisiones",
-  "cuello-botella": "Dejar de ser cuello de botella",
   conversar: "Quiere conversar primero",
 };
 
