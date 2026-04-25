@@ -131,9 +131,6 @@ export default function Home() {
               <Link href="#servicios">Servicios</Link>
             </li>
             <li>
-              <Link href="#proceso">Proceso</Link>
-            </li>
-            <li>
               <Link href="#faq">FAQ</Link>
             </li>
             <li>
@@ -191,7 +188,7 @@ export default function Home() {
         >
           <div className="container">
             <div className="services__header">
-              <span className="services__label">Servicios</span>
+              <span className="services__label">Pilares de Gestión</span>
               <h2 id="services-heading" className="services__title">
                 Tu equipo completo.{" "}
                 <span className="services__title-light">
@@ -241,75 +238,6 @@ export default function Home() {
                 </p>
               </article>
             </div>
-          </div>
-        </section>
-
-        {/* PROCESO / CÓMO TRABAJAMOS */}
-        <section
-          className="process"
-          id="proceso"
-          aria-labelledby="process-heading"
-        >
-          <div className="container">
-            <div className="process__header">
-              <span className="process__label">Cómo trabajamos</span>
-              <h2 id="process-heading" className="process__title">
-                De desordenado a operando con estructura, en cuatro pasos.
-              </h2>
-            </div>
-
-            <ol className="process__grid">
-              <li className="process__step">
-                <span className="process__number" aria-hidden="true">
-                  01
-                </span>
-                <div className="process__content">
-                  <h3>Conversamos.</h3>
-                  <p>
-                    30 minutos, sin costo. Entendemos cómo funciona tu empresa
-                    hoy.
-                  </p>
-                </div>
-              </li>
-
-              <li className="process__step">
-                <span className="process__number" aria-hidden="true">
-                  02
-                </span>
-                <div className="process__content">
-                  <h3>Diagnosticamos.</h3>
-                  <p>
-                    Identificamos qué tiene sentido ordenar primero y por qué.
-                  </p>
-                </div>
-              </li>
-
-              <li className="process__step">
-                <span className="process__number" aria-hidden="true">
-                  03
-                </span>
-                <div className="process__content">
-                  <h3>Proponemos.</h3>
-                  <p>
-                    Plan de trabajo con alcance, tiempo y costo claros. Sin
-                    sorpresas.
-                  </p>
-                </div>
-              </li>
-
-              <li className="process__step">
-                <span className="process__number" aria-hidden="true">
-                  04
-                </span>
-                <div className="process__content">
-                  <h3>Implementamos.</h3>
-                  <p>
-                    Ejecutamos contigo y con tu equipo. No te dejamos un
-                    PowerPoint.
-                  </p>
-                </div>
-              </li>
-            </ol>
           </div>
         </section>
 
@@ -412,9 +340,6 @@ export default function Home() {
             <div>
               <p className="footer__col-title">Empresa</p>
               <ul className="footer__links">
-                <li>
-                  <Link href="#proceso">Cómo trabajamos</Link>
-                </li>
                 <li>
                   <Link href="#faq">FAQ</Link>
                 </li>
