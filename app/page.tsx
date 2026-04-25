@@ -42,25 +42,25 @@ const jsonLd = {
               "@type": "Service",
               name: "Optimización de Procesos",
               description:
-                "Mapeo, simplificación y documentación de los flujos operativos de la empresa para reducir improvisación y aumentar la predictibilidad de las entregas.",
+                "Analizamos y rediseñamos tus flujos de trabajo actuales para eliminar cuellos de botella, reducir errores y maximizar la productividad de tu equipo.",
             },
           },
           {
             "@type": "Offer",
             itemOffered: {
               "@type": "Service",
-              name: "Gestión Estratégica y Administrativa",
+              name: "Gestión Estratégica & Administrativa",
               description:
-                "Acompañamiento en decisiones estratégicas y operación de la gestión administrativa del día a día: planificación, coordinación y cumplimiento.",
+                "Nos convertimos en tu brazo derecho administrativo. Organizamos la estructura de tu empresa, desde la gestión de proveedores hasta el control de flujos de caja.",
             },
           },
           {
             "@type": "Offer",
             itemOffered: {
               "@type": "Service",
-              name: "Asesoría Contable y Tributaria",
+              name: "Asesoría Contable & Tributaria",
               description:
-                "Contabilidad mensual, cumplimiento tributario y asesoría fiscal alineada con la realidad operativa y los objetivos de la empresa.",
+                "A través de nuestra red de aliados estratégicos, garantizamos que tu empresa cumpla con todas las normativas tributarias de manera eficiente y puntual.",
             },
           },
         ],
@@ -207,9 +207,9 @@ export default function Home() {
                 </span>
                 <h3 className="service__name">Optimización de Procesos</h3>
                 <p className="service__desc">
-                  Mapeamos, simplificamos y documentamos los flujos de tu
-                  empresa. Procesos claros para que cada entrega no dependa
-                  de la memoria del equipo.
+                  Analizamos y rediseñamos tus flujos de trabajo actuales para
+                  eliminar cuellos de botella, reducir errores y maximizar la
+                  productividad de tu equipo.
                 </p>
               </article>
 
@@ -218,12 +218,12 @@ export default function Home() {
                   02
                 </span>
                 <h3 className="service__name">
-                  Gestión Estratégica y Administrativa
+                  Gestión Estratégica &amp; Administrativa
                 </h3>
                 <p className="service__desc">
-                  Acompañamos las decisiones estratégicas y operamos la
-                  gestión administrativa del día a día. Planificación,
-                  coordinación y ejecución bajo un solo equipo.
+                  Nos convertimos en tu brazo derecho administrativo.
+                  Organizamos la estructura de tu empresa, desde la gestión
+                  de proveedores hasta el control de flujos de caja.
                 </p>
               </article>
 
@@ -232,11 +232,12 @@ export default function Home() {
                   03
                 </span>
                 <h3 className="service__name">
-                  Asesoría Contable y Tributaria
+                  Asesoría Contable &amp; Tributaria
                 </h3>
                 <p className="service__desc">
-                  Contabilidad mensual, cumplimiento tributario y asesoría
-                  fiscal alineada con la realidad operativa de tu empresa.
+                  A través de nuestra red de aliados estratégicos, garantizamos
+                  que tu empresa cumpla con todas las normativas tributarias de
+                  manera eficiente y puntual.
                 </p>
               </article>
             </div>
