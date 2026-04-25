@@ -214,8 +214,8 @@ export default function Home() {
                   AHORA<span className="text-vermillion">.</span>
                 </h2>
                 <p className="final-cta__sub">
-                  Consulta gratuita de 30 minutos. Trazamos tu hoja de ruta
-                  para ordenar tu operación.
+                  Agenda una consulta gratuita y descubre cómo podemos
+                  transformar tu operación en las próximas semanas.
                 </p>
               </div>
               <div className="final-cta__right">

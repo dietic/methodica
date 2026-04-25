@@ -110,7 +110,7 @@ export default function ContactForm() {
           name="message"
           rows={3}
           className="contact-form__input contact-form__textarea"
-          placeholder="Cuéntanos algo sobre tu empresa (opcional)"
+          placeholder="Cuéntanos sobre tu empresa o proyecto y cómo podemos ayudarte"
         />
       </div>
 
