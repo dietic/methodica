@@ -122,8 +122,7 @@ export default function Home() {
               <div className="hero__right animate-fade-in animate-delay-2">
                 <p className="hero__sub">
                   Diseñamos y operamos la estructura, procesos y gestión de
-                  startups y empresas de servicios. Para que decidas con
-                  claridad y crezcas sin frenos.
+                  startups y empresas de servicios.
                 </p>
                 <Link href="#contacto" className="btn btn--vermillion">
                   Agendar Consulta Gratuita

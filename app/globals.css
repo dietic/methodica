@@ -330,6 +330,7 @@ body {
   font-size: clamp(3rem, 12vw, 10rem);
   display: block;
   margin-top: -0.2rem;
+  line-height: 0.7;
 }
 
 .hero__dot {
@@ -347,7 +348,7 @@ body {
   font-family: var(--font-jetbrains), "JetBrains Mono", monospace;
   font-size: clamp(0.8rem, 1.2vw, 0.95rem);
   line-height: 1.8;
-  color: rgba(17, 17, 17, 0.65);
+  color: #11111173;
   max-width: 480px;
 }
 
