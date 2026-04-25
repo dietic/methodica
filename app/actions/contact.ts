@@ -3,9 +3,10 @@
 import nodemailer from "nodemailer";
 
 const INTEREST_LABELS: Record<string, string> = {
-  procesos: "Ordenar procesos y operación",
-  visibilidad: "Visibilidad financiera y decisiones",
-  conversar: "Quiere conversar primero",
+  procesos: "Optimizar procesos y operación",
+  administrativa: "Delegar la gestión administrativa",
+  contable: "Soporte contable y tributario",
+  conversar: "Quiero conversar primero",
 };
 
 export async function sendContactForm(formData: FormData) {

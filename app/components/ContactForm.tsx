@@ -4,8 +4,9 @@ import { useState, type FormEvent } from "react";
 import { sendContactForm } from "../actions/contact";
 
 const INTEREST_OPTIONS = [
-  { value: "procesos", label: "Ordenar procesos y operación" },
-  { value: "visibilidad", label: "Visibilidad financiera y decisiones" },
+  { value: "procesos", label: "Optimizar procesos y operación" },
+  { value: "administrativa", label: "Delegar la gestión administrativa" },
+  { value: "contable", label: "Soporte contable y tributario" },
   { value: "conversar", label: "Quiero conversar primero" },
 ];
 
