@@ -40,18 +40,27 @@ const jsonLd = {
             "@type": "Offer",
             itemOffered: {
               "@type": "Service",
-              name: "Estructura y Gestión Empresarial",
+              name: "Optimización de Procesos",
               description:
-                "Diseño del marco organizacional, roles, flujos y sistemas para que la empresa opere con orden desde su base.",
+                "Mapeo, simplificación y documentación de los flujos operativos de la empresa para reducir improvisación y aumentar la predictibilidad de las entregas.",
             },
           },
           {
             "@type": "Offer",
             itemOffered: {
               "@type": "Service",
-              name: "Implementación y Orden Administrativo",
+              name: "Gestión Estratégica y Administrativa",
               description:
-                "Ejecución y coordinación de la gestión administrativa del día a día: trámites, documentación y cumplimiento.",
+                "Acompañamiento en decisiones estratégicas y operación de la gestión administrativa del día a día: planificación, coordinación y cumplimiento.",
+            },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Asesoría Contable y Tributaria",
+              description:
+                "Contabilidad mensual, cumplimiento tributario y asesoría fiscal alineada con la realidad operativa y los objetivos de la empresa.",
             },
           },
         ],
@@ -196,13 +205,11 @@ export default function Home() {
                 <span className="service__number" aria-hidden="true">
                   01
                 </span>
-                <h3 className="service__name">
-                  Estructura y Gestión Empresarial
-                </h3>
+                <h3 className="service__name">Optimización de Procesos</h3>
                 <p className="service__desc">
-                  Diseñamos roles, flujos y sistemas para que tu empresa
-                  funcione con orden desde la base — sin depender de ti para
-                  cada decisión.
+                  Mapeamos, simplificamos y documentamos los flujos de tu
+                  empresa. Procesos claros para que cada entrega no dependa
+                  de la memoria del equipo.
                 </p>
               </article>
 
@@ -211,11 +218,25 @@ export default function Home() {
                   02
                 </span>
                 <h3 className="service__name">
-                  Implementación y Orden Administrativo
+                  Gestión Estratégica y Administrativa
                 </h3>
                 <p className="service__desc">
-                  Operamos el día a día: trámites, documentación, coordinación
-                  y cumplimiento. Tú te enfocas en crecer.
+                  Acompañamos las decisiones estratégicas y operamos la
+                  gestión administrativa del día a día. Planificación,
+                  coordinación y ejecución bajo un solo equipo.
+                </p>
+              </article>
+
+              <article className="service">
+                <span className="service__number" aria-hidden="true">
+                  03
+                </span>
+                <h3 className="service__name">
+                  Asesoría Contable y Tributaria
+                </h3>
+                <p className="service__desc">
+                  Contabilidad mensual, cumplimiento tributario y asesoría
+                  fiscal alineada con la realidad operativa de tu empresa.
                 </p>
               </article>
             </div>
