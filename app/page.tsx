@@ -134,9 +134,7 @@ export default function Home() {
         </section>
 
         <div className="container">
-          <div className="hero-divider" aria-hidden="true">
-            <span className="hero-divider__dot"></span>
-          </div>
+          <hr className="hero-divider" />
         </div>
 
         {/* SERVICES */}

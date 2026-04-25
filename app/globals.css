@@ -366,33 +366,15 @@ body {
 }
 
 .hero-divider {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1.5rem;
-  padding: 3rem 0;
-}
-
-.hero-divider::before,
-.hero-divider::after {
-  content: "";
-  flex: 1;
+  border: 0;
   height: 1px;
   background: rgba(17, 17, 17, 0.15);
-}
-
-.hero-divider__dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: #f0eee9;
-  outline: 1px solid rgba(17, 17, 17, 0.12);
-  outline-offset: 4px;
+  margin: 3rem 0;
 }
 
 @media (min-width: 768px) {
   .hero-divider {
-    padding: 5rem 0;
+    margin: 5rem 0;
   }
 }
 
