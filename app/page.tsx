@@ -168,56 +168,6 @@ export default function Home() {
           </div>
         </section>
 
-        <div className="container">
-          <hr className="rule" />
-        </div>
-
-        {/* PAIN / PROBLEM */}
-        <section className="pain" id="problema">
-          <div className="container">
-            <div className="pain__grid">
-              <article className="pain__item">
-                <span className="pain__number" aria-hidden="true">
-                  01
-                </span>
-                <div className="pain__content">
-                  <h3>Todo pasa por ti.</h3>
-                  <p>
-                    Cada decisión, proceso y cliente termina en tu escritorio.
-                    La empresa no avanza sin ti.
-                  </p>
-                </div>
-              </article>
-
-              <article className="pain__item">
-                <span className="pain__number" aria-hidden="true">
-                  02
-                </span>
-                <div className="pain__content">
-                  <h3>Cada cliente obliga a improvisar.</h3>
-                  <p>
-                    Sin procesos definidos, el equipo no tiene claridad y cada
-                    entrega cuesta más de lo que debería.
-                  </p>
-                </div>
-              </article>
-
-              <article className="pain__item">
-                <span className="pain__number" aria-hidden="true">
-                  03
-                </span>
-                <div className="pain__content">
-                  <h3>Decides a ciegas.</h3>
-                  <p>
-                    Sabes que vende, pero no cuánto queda. Sin visibilidad de
-                    márgenes y operación, cada decisión es un salto al vacío.
-                  </p>
-                </div>
-              </article>
-            </div>
-          </div>
-        </section>
-
         {/* SERVICES */}
         <section
           className="services"
